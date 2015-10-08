@@ -1,0 +1,59 @@
+# General
+name: Leonard Lazzaro
+description: Personal Page
+url: https://www.lazzaro.com.ar
+google_verify: HWO2jrvTo3rJLDCmPOSBRzGD6e68MbXw4Bgb1Lb9PDI
+
+author:
+    name: Leonard Lazzaro
+    email: lazzaroleonardo@gmail.com
+    uri: https://www.lazzaro.com.ar/about/
+
+# Build
+markdown: kramdown
+kramdown:
+    input: GFM
+sass:
+    style: compressed
+    sass_dir: assets/sass
+
+#Other
+permalink: :categories/:title
+timezone: America/Buenos Aires
+include: [ 'robots.txt' ]
+exclude: [ 'LICENSE', 'README.md', 'CNAME', 'vendor', 'Gemfile' ]
+gems:
+    - jekyll-sitemap
+    - jekyll-feed
+
+# Self explaining
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "null"
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      type: "projects"
+    values:
+      layout: "project"
+
+twitter_username:     llazzaro
+github_username:      llazzaro
+linkedin_username:    llazzaro
+google_plus_username: lazzaroleonardo
+facebook_username:    lazzaroleonardo
+dribbble_username:
+
+google_analytics: XXXX
