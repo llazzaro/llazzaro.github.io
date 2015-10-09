@@ -15,7 +15,7 @@ kramdown:
     input: GFM
 sass:
     style: compressed
-    sass_dir: assets/sass
+    sass_dir: assets/css
 
 #Other
 permalink: :categories/:title
