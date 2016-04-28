@@ -1,59 +1,63 @@
-# General
-name: Leonard Lazzaro
-description: Personal Page
+
+# SEO settings
+title: Leonardo Lazzaro
+description: ""
+keywords: ""
 url: https://www.lazzaro.com.ar
+baseurl: null
+
 google_verify: HWO2jrvTo3rJLDCmPOSBRzGD6e68MbXw4Bgb1Lb9PDI
+google_analytics: UA-56357606-1
+repo: https://github.com/llazzaro/llazzaro.github.io/
+disqus_shortname: "llazzaro"
 
-author:
-    name: Leonard Lazzaro
-    email: lazzaroleonardo@gmail.com
-    uri: https://www.lazzaro.com.ar/about/
-
-# Build
-markdown: kramdown
-kramdown:
-    input: GFM
-sass:
-    style: compressed
-    sass_dir: assets/css
-
-#Other
-permalink: :categories/:title
 timezone: America/Buenos Aires
 include: [ 'robots.txt' ]
-exclude: [ 'LICENSE', 'README.md', 'CNAME', 'vendor', 'Gemfile' ]
+
+# Build settings
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : pygments
+
+paginate: 4
+paginate_path: "/page/:num/"
+comments: true
+
+source: source
+destination: _site
+
+# Sass configuration
+sass:
+  sass_dir: assets/scss
+  style: compressed # expanded
+
+# Author settings
+author:
+  name     : Leonardo Lazzaro
+  job      : blah blah
+  bio      : ""
+  thumb    : /images/author.jpg
+  email    : llazzaro@dc.uba.ar
+  url      : http://www.lazzaro.com.ar
+  github   : http://github.com/llazzaro
+  twitter  : http://twitter.com/llazzaro
+  facebook : http://facebook.com/lazzaroleonardo
+  linkedin : http://linkedin.com/in/llazzaro
+
+# social settings
+og_locale: "pt_AR"
+twitter_card: "summary_large_image"
+twitter_site: "@llazzaro"
+
 gems:
-    - jekyll-sitemap
-    - jekyll-feed
+  - bourbon
+  - jekyll-paginate
 
-# Self explaining
-defaults:
-  -
-    scope:
-      path: ""
-    values:
-      layout: "null"
-  -
-    scope:
-      type: "pages"
-    values:
-      layout: "page"
-  -
-    scope:
-      type: "posts"
-    values:
-      layout: "post"
-  -
-    scope:
-      type: "projects"
-    values:
-      layout: "project"
+# navbar pages
+navbar:
+  - slug : about
+    title: About
+  - slug : blog
+    title: Blog
 
-twitter_username:     llazzaro
-github_username:      llazzaro
-linkedin_username:    llazzaro
-google_plus_username: lazzaroleonardo
-facebook_username:    lazzaroleonardo
-dribbble_username:
-
-google_analytics: XXXX
+exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
