@@ -6,7 +6,7 @@ google_verify: HWO2jrvTo3rJLDCmPOSBRzGD6e68MbXw4Bgb1Lb9PDI
 baseurl: "/"
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
-highlighter: pygments
+highlighter: rouge
 analytics_id: 'UA-56357606-1'
 
 # About/contact
