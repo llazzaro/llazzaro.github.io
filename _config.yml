@@ -1,63 +1,49 @@
-
-# SEO settings
-title: Leonardo Lazzaro
-description: ""
-keywords: ""
-url: https://www.lazzaro.com.ar
-baseurl: null
-
+# Setup
+title:               Prueba
+description:         "Prueba description"
+url:                 http://www.lazzaro.com.ar
 google_verify: HWO2jrvTo3rJLDCmPOSBRzGD6e68MbXw4Bgb1Lb9PDI
-google_analytics: UA-56357606-1
-repo: https://github.com/llazzaro/llazzaro.github.io/
-disqus_shortname: "llazzaro"
+baseurl: "/"
+permalink: blog/:year/:month/:day/:title
+exclude: ["Makefile", "README.md"]
+highlighter: pygments
+analytics_id: 'UA-56357606-1'
 
-timezone: America/Buenos Aires
-include: [ 'robots.txt' ]
-
-# Build settings
-permalink   : /:year/:title/
-markdown    : kramdown
-highlighter : pygments
-
-paginate: 4
-paginate_path: "/page/:num/"
-comments: true
-
-source: source
-destination: _site
-
-# Sass configuration
-sass:
-  sass_dir: assets/scss
-  style: compressed # expanded
-
-# Author settings
+# About/contact
 author:
-  name     : Leonardo Lazzaro
-  job      : blah blah
-  bio      : ""
-  thumb    : /images/author.jpg
-  email    : llazzaro@dc.uba.ar
+  name:                Leonardo Lazzaro
+  email:               "llazzaro@dc.uba.ar" # email here
+  avatar:              img/avatar.jpg
+  profile-pic:         img/profile-pic.jpg
   url      : http://www.lazzaro.com.ar
   github   : http://github.com/llazzaro
   twitter  : http://twitter.com/llazzaro
   facebook : http://facebook.com/lazzaroleonardo
   linkedin : http://linkedin.com/in/llazzaro
 
-# social settings
-og_locale: "pt_AR"
-twitter_card: "summary_large_image"
-twitter_site: "@llazzaro"
 
-gems:
-  - bourbon
-  - jekyll-paginate
 
-# navbar pages
-navbar:
-  - slug : about
-    title: About
-  - slug : blog
-    title: Blog
+# Build settings
+markdown:            kramdown
+permalink:           /:title
+sass:
+  sass_dir:          _sass
+  style:            :compressed
 
-exclude: ["gulp", "node_modules", "bower", "bower_components", "config.rb", "src", "Gemfile", "Gemfile.lock", ".rvmrc", ".rbenv-version", "package.json", "gulpfile.js", "README.md", "Rakefile", "changelog.md"]
+
+# Default settings
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: Leonardo Lazzaro
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
