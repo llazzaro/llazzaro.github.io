@@ -1,7 +1,7 @@
 # Setup
 title:               Prueba
 description:         "Prueba description"
-url:                 http://www.lazzaro.com.ar
+url:                 https://www.lazzaro.com.ar
 google_verify: HWO2jrvTo3rJLDCmPOSBRzGD6e68MbXw4Bgb1Lb9PDI
 baseurl: "/"
 permalink: blog/:year/:month/:day/:title
@@ -15,11 +15,11 @@ author:
   email:               "llazzaro@dc.uba.ar" # email here
   avatar:              img/avatar.jpg
   profile-pic:         img/profile-pic.jpg
-  url      : http://www.lazzaro.com.ar
-  github   : http://github.com/llazzaro
-  twitter  : http://twitter.com/llazzaro
-  facebook : http://facebook.com/lazzaroleonardo
-  linkedin : http://linkedin.com/in/llazzaro
+  url      : https://www.lazzaro.com.ar
+  github   : https://github.com/llazzaro
+  twitter  : https://twitter.com/llazzaro
+  facebook : https://facebook.com/lazzaroleonardo
+  linkedin : https://linkedin.com/in/llazzaro
 
 
 
