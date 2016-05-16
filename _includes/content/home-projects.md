@@ -1,9 +1,6 @@
 
 # Here's what I've been working on
 
-* ### Investigating the connection between Jekyll and Hyde
-    * I'm on a quest to investigate the identity of Hyde, as I fear that he is blackmailing Jekyll.
+* ### [(django-scheduler)](https://github.com/llazzaro/django-scheduler)
+    * A calendar app for Django 1.7. Py3 Compatible.
 
-
-* ### [(Another Sample Project)](http://www.lazzaro.com.ar)
-    * Just working on changing the world, no big deal.

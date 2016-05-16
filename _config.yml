@@ -3,7 +3,7 @@ title:               Prueba
 description:         "Prueba description"
 url:                 https://www.lazzaro.com.ar
 google_verify: HWO2jrvTo3rJLDCmPOSBRzGD6e68MbXw4Bgb1Lb9PDI
-baseurl: "/"
+# baseurl: "/"
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
 highlighter: rouge

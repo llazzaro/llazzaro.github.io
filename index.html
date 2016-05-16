@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Home
-type: Home 
-header: none 
+type: Home
+header: none
 footer: none
 ---
 
@@ -20,7 +20,7 @@ footer: none
     <li class="tab-header-and-content">
       <a href="#" id="trigger-form" class="tab-aside-link is-active">Newsletter</a>
       <div class="tab-aside-content">
-      <!-- no tab content, filler div for initial borders --> 
+      <!-- no tab content, filler div for initial borders -->
       </div>
     </li>
 
@@ -31,9 +31,7 @@ footer: none
           {% for post in site.posts limit: 5 %}
           <article class="post">
             <h3 class="post-title">
-              <a href="{{ site.baseurl }}{{ post.url }}">
-                {{ post.title }}
-              </a>
+              <a href="{{ post.url }}"> {{ post.title }}</a>
             </h3>
           </article>
           {% endfor %}
@@ -43,7 +41,7 @@ footer: none
 
     <li class="tab-header-and-content">
       <a href="#" class="tab-link">Projects</a>
-      <div class="tab-content featured-projects"> 
+      <div class="tab-content featured-projects">
         {% capture home-projects %}
           {% include content/home-projects.md %}
         {% endcapture %}
