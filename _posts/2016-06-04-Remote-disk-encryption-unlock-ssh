@@ -13,7 +13,7 @@ The following steps are to setup a dropbear ssh service on boot, so the user can
 Configuration
 
 {% highlight bash %}
-sudo apt-get install dropbear
+sudo apt-get install penssh-server dropbear busybox
 {% endhighlight %}
 
 {% highlight bash %}
@@ -21,11 +21,11 @@ sudo vi /etc/default/dropbear
 {% endhighlight %}
 
 {% highlight bash %}
-change NO_START=1 to NO_START=0
+update-initramfs -u
 {% endhighlight %}
 
-Create your ssh keys for the computer that will log in to unlock the disck if you don't did it before.:
-
+Create your ssh keys for the computer that will log in to unlock the disk if you don't did it before.
+Execute this on the client machine:
 {% highlight bash %}
 ssh-keygen
 {% endhighlight %}
@@ -33,12 +33,30 @@ ssh-keygen
 now copy via scp your public key and append it to the dropbear home.
 
 {% highlight bash %}
-cat id_rsa.pub >>/etc/initramfs-tools/root/.ssh/authorized_keys
+cat id_rsa.pub >> /etc/initramfs-tools/root/.ssh/authorized_keys
 {% endhighlight %}
+
+Remote unlocking manual steps
+
+ssh to the server and execute the following steps:
+
+{% highlight bash %}
+/scripts/local-top/cryptroot
+/sbin/vgchange -a y lv00
+{% endhighlight %}
+
+Now we have to kill cryptroot
+{% highlight bash %}
+ps | grep "/scripts/local-top/cryptroot" | cut -d " " -f 3 | xargs kill -9
+exit
+{% endhighlight %}
+
+Now that we understand how to manually unlock the disk we can automate it with the following script:
 
 
 References:
 http://www.emmolution.org/?p=307
 https://gist.github.com/wolli/5295625
 https://help.ubuntu.com/community/SSH/OpenSSH/Keys
+http://blog.nguyenvq.com/blog/2011/09/13/remote-unlocking-luks-encrypted-lvm-using-dropbear-ssh-in-ubuntu/
 https://stinkyparkia.wordpress.com/2014/10/14/remote-unlocking-luks-encrypted-lvm-using-dropbear-ssh-in-ubuntu-server-14-04-1-with-static-ipst/
