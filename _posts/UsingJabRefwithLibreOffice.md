@@ -13,14 +13,14 @@ Steps to integrate LibreOffice with JabRef
 Go to **Preferences > LibreOffice > Advanced** and make sure that *"Use a Java runtime environment"* is checked and that a runtime is properly selected in the installed list.
 Advanced settings should look like this:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.16%20AM.png "Logo Title Text 1")
 
 
 2. Configure JabRef to use LibreOffice
 
 * Go to **Tools -> OpenOffice/LibreOffice connection**. A new tab will appear on the left and select settings on the tab
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![alt text](https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.25%20AM.png "Logo Title Text 1")
 
 Start using the "cite" button to add cites on  your articles, when you are done click on the icon for manual connect and use the path of LibreOffice, which usually is **/Applications/LibreOffice.app**.
 
