@@ -1,0 +1,44 @@
+---
+title: Compíling gromacs from development repository
+date: 2016-06-27 23:37
+lang: en
+---
+
+# What is GROMACS?
+
+GROMACS is one of the most widely used softwares in the field of computational chemistry, and commonly run on everything from laptops and playstations to the largest computers in the world, such as Kei and TITAN.
+
+# Dependencies instalation
+
+sudo apt-get install git fftw3-dev cmake
+
+## CUDA development enviroment setup for Ubuntu/Fedora
+Download the .deb or .rpm from [here](https://developer.nvidia.com/cuda-downloads)
+
+### For Ubuntu
+{% highlight bash %}
+sudo dpkg -i cuda-repo-<distro>_<version>_<architecture>.deb
+sudo apt-get update
+sudo apt-get install cuda
+{% endhighlight %}
+
+### For Fedora
+{% highlight haskell %}
+sudo rpm --install cuda-repo-<distro>-<version>.<architecture>.rpm
+sudo yum clean all
+sudo yum install cuda
+{% endhighlight %}
+
+# Checking out the Gromacs source code
+
+git clone git://git.gromacs.org/gromacs.git
+
+# Compiling the source code
+
+cd gromacs
+mkdir build
+cmake .. -DCMAKE_INSTALL_PREFIX=/home/leonardo/.gromacs/gromacs-2016-dev -DGMX_GPU=ON -DCUDA_TOOLKIT_ROOT_DIR=
+make -j 8 # change this to match your cpu core count
+
+
+
