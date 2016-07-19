@@ -8,6 +8,7 @@ permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
 highlighter: rouge
 analytics_id: 'UA-56357606-1'
+comments: true
 
 # About/contact
 author:
