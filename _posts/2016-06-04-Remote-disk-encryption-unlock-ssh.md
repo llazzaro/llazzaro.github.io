@@ -13,7 +13,7 @@ The following steps are to setup a dropbear ssh service on boot, so the user can
 Configuration
 
 {% highlight bash %}
-sudo apt-get install penssh-server dropbear busybox
+sudo apt-get install openssh-server dropbear busybox
 {% endhighlight %}
 
 {% highlight bash %}
