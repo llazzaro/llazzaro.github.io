@@ -66,7 +66,7 @@ sudo ./bin/blue_hydra
 If everything is right, you should see the bluehydra working.
 
 
-![alt text](https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.16%20AM.png "Logo Title Text 1")
+![alt text](https://github.com/llazzaro/llazzaro.github.io/blob/master/_posts/blue_hydra.png?raw=true "Blue_hydra on raspbian jessie")
 
 if you have a python import error on bluezutils, try to download bluezutils.py and copy it to the bin directory of blue hydra:
 
