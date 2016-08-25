@@ -4,8 +4,8 @@ date: 2016-08-23 20:22
 lang: en
 ---
 
-# Introduction
-
+## Introduction
+ap
 BlueHydra is a Bluetooth device discovery service built on top of the bluez library.
 In this tutorial we are going to give the steps to install bluehydra on the rasperberry pi using Raspbian GNU/Linux 8 (jessie).
 If you are using raspbien wheezy, please see the Apendix
@@ -43,7 +43,7 @@ In the following steps we are going to use blunder to install ruby gems.
 Now that we have ruby working on the raspberry pi, we are going to install the dependencies.
 
 {% highlight bash %}
- sudo apt-get install python-bluez python-dbus sqlite3 bluez-tools
+ sudo apt-get install python-bluez python-dbus sqlite3 bluez-tools ruby-dev
 {% endhighlight %}
 
 
@@ -62,10 +62,18 @@ Now that we have ruby working on the raspberry pi, we are going to install the d
 sudo ./bin/blue_hydra
 {% endhighlight %}
 
+
 If everything is right, you should see the bluehydra working.
 
 
 ![alt text](https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.16%20AM.png "Logo Title Text 1")
+
+if you have a python import error on bluezutils, try to download bluezutils.py and copy it to the bin directory of blue hydra:
+
+{% highlight bash %}
+ wget https://raw.githubusercontent.com/pauloborges/bluez/master/test/bluezutils.py
+{% endhighlight %}
+
 
 # Apendix 
 
@@ -82,13 +90,4 @@ dbus.exceptions.DBusException: org.freedesktop.DBus.Error.UnknownMethod: Method 
 {% endhighlight %}
 
 To check which version you are using just cat /etc/os-release
-
-## Python import error
-
-Since wheezy uses an old version of bluez you will find a ImportError like this one also:
-
-{% highlight bash %}
-E, [2016-08-24T00:19:43.606500 #27471] ERROR -- :   File "/home/pi/blue_hydra/bin/test-discovery", line 15, in <module>
-E, [2016-08-24T00:19:43.606813 #27471] ERROR -- :     import bluezutils
-{% endhighlight %}
 
