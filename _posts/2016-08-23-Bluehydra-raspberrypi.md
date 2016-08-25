@@ -1,5 +1,5 @@
 ---
-title: Installing bluehydra on raspeberrypi
+title: Installing bluehydra on raspberry pi
 date: 2016-08-23 20:22
 lang: en
 ---
