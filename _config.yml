@@ -10,6 +10,9 @@ highlighter: rouge
 analytics_id: 'UA-56357606-1'
 comments: true
 
+disqus:
+  short_name: lazzaroleonardo
+
 # About/contact
 author:
   name:                Leonardo Lazzaro
