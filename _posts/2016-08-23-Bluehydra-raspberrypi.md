@@ -43,7 +43,7 @@ In the following steps we are going to use blunder to install ruby gems.
 Now that we have ruby working on the raspberry pi, we are going to install the dependencies.
 
 {% highlight bash %}
- sudo apt-get install python-bluez python-dbus sqlite3 bluez-tools ruby-dev
+ sudo apt-get install python-bluez python-dbus sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts python-bluez python-dbus libsqlite3-dev ubertooth
 {% endhighlight %}
 
 
