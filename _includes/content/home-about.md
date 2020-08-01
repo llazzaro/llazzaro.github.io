@@ -1,4 +1,15 @@
 # Leonardo Lazzaro
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Computer Scientist, PhD dropout and never ending studying. I'm always fooled by randomness.
+
+Currently I design and build software for a living. I have working knowledge of Python, Javascript and Go. I enjoy improving the performance on software.
+
+In my free time I like to explore the ether, experiment with SEO (Search engine optimization)  and take some photos with my fujifilm camera.
+
+[Check my Linkedin profile](https://ar.linkedin.com/in/llazzaro)
+
+
+# Talks
+
+Pyconar 2019: [Sobreviviendo al síndrome del segundo sistema con Python, por Matias Lang y Leonardo Lazzaro](https://www.youtube.com/watch?v=gPuqrHuRD0U)
 
