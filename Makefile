@@ -1,4 +1,0 @@
-
-
-runserver:
-	hugo server -D

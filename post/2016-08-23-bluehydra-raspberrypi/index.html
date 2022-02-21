@@ -1,0 +1,130 @@
+<!doctype html><html lang=en dir=auto>
+<head><meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+<meta name=robots content="index, follow">
+<title>Installing bluehydra on raspberry pi | Leonardo Lazzaro</title>
+<meta name=keywords content>
+<meta name=description content="Introduction ap BlueHydra is a Bluetooth device discovery service built on top of the bluez library. In this tutorial we are going to give the steps to install bluehydra on the rasperberry pi using Raspbian GNU/Linux 8 (jessie). If you are using raspbien wheezy, please see the Apendix
+Installing ruby with rvm There are several ways to install ruby, the one I prefer is with rvm. rvm is is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments.">
+<meta name=author content>
+<link rel=canonical href=https://llazzaro.github.io/llazzaro.github.io/post/2016-08-23-bluehydra-raspberrypi/>
+<link crossorigin=anonymous href=/llazzaro.github.io/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/llazzaro.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://llazzaro.github.io/llazzaro.github.io/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://llazzaro.github.io/llazzaro.github.io/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://llazzaro.github.io/llazzaro.github.io/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://llazzaro.github.io/llazzaro.github.io/apple-touch-icon.png>
+<link rel=mask-icon href=https://llazzaro.github.io/llazzaro.github.io/safari-pinned-tab.svg>
+<meta name=theme-color content="#2e2e33">
+<meta name=msapplication-TileColor content="#2e2e33">
+<noscript>
+<style>#theme-toggle,.top-link{display:none}</style>
+<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
+</noscript><meta property="og:title" content="Installing bluehydra on raspberry pi">
+<meta property="og:description" content="Introduction ap BlueHydra is a Bluetooth device discovery service built on top of the bluez library. In this tutorial we are going to give the steps to install bluehydra on the rasperberry pi using Raspbian GNU/Linux 8 (jessie). If you are using raspbien wheezy, please see the Apendix
+Installing ruby with rvm There are several ways to install ruby, the one I prefer is with rvm. rvm is is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://llazzaro.github.io/llazzaro.github.io/post/2016-08-23-bluehydra-raspberrypi/"><meta property="article:section" content="post">
+<meta property="article:published_time" content="2016-08-23T00:00:00+00:00">
+<meta property="article:modified_time" content="2016-08-23T00:00:00+00:00">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Installing bluehydra on raspberry pi">
+<meta name=twitter:description content="Introduction ap BlueHydra is a Bluetooth device discovery service built on top of the bluez library. In this tutorial we are going to give the steps to install bluehydra on the rasperberry pi using Raspbian GNU/Linux 8 (jessie). If you are using raspbien wheezy, please see the Apendix
+Installing ruby with rvm There are several ways to install ruby, the one I prefer is with rvm. rvm is is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments.">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://llazzaro.github.io/llazzaro.github.io/post/"},{"@type":"ListItem","position":3,"name":"Installing bluehydra on raspberry pi","item":"https://llazzaro.github.io/llazzaro.github.io/post/2016-08-23-bluehydra-raspberrypi/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Installing bluehydra on raspberry pi","name":"Installing bluehydra on raspberry pi","description":"Introduction ap BlueHydra is a Bluetooth device discovery service built on top of the bluez library. In this tutorial we are going to give the steps to install bluehydra on the rasperberry pi using Raspbian GNU/Linux 8 (jessie). If you are using raspbien wheezy, please see the Apendix\nInstalling ruby with rvm There are several ways to install ruby, the one I prefer is with rvm. rvm is is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments.","keywords":[],"articleBody":"Introduction ap BlueHydra is a Bluetooth device discovery service built on top of the bluez library. In this tutorial we are going to give the steps to install bluehydra on the rasperberry pi using Raspbian GNU/Linux 8 (jessie). If you are using raspbien wheezy, please see the Apendix\nInstalling ruby with rvm There are several ways to install ruby, the one I prefer is with rvm. rvm is is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments. Download and install rvm with:\ncurl -L https://get.rvm.io | bash -s stable --ruby This will probably raise the error:\ngpg: Can't check signature: public key not found Read the instructions to download the signatures from the error..\nNow let’s check that we are using a correct ruby version:\nrvm current In the following steps we are going to use blunder to install ruby gems.\nsudo gem install bundler Now that we have ruby working on the raspberry pi, we are going to install the dependencies.\nsudo apt-get install python-bluez python-dbus sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts python-bluez python-dbus libsqlite3-dev ubertooth BlueHydra Instalation git clone https://github.com/pwnieexpress/blue_hydra.git cd blue_hydra bundle install Final Result sudo ./bin/blue_hydra If everything is right, you should see the bluehydra working.\nif you have a python import error on bluezutils, try to download bluezutils.py and copy it to the bin directory of blue hydra:\nwget https://raw.githubusercontent.com/pauloborges/bluez/master/test/bluezutils.py Apendix Not working in wheezy When I began writting this tutorial I was using wheezy, but since I got a lot of issues with dbus and errors like:\nE, [2016-08-24T00:19:43.606500 #27471] ERROR -- : File \"/home/pi/blue_hydra/bin/test-discovery\", line 15, in  E, [2016-08-24T00:19:43.606813 #27471] ERROR -- : import bluezutils dbus.exceptions.DBusException: org.freedesktop.DBus.Error.UnknownMethod: Method \"GetManagedObjects\" with signature \"\" on interface \"org.freedesktop.DBus.ObjectManager\" doesn't exist To check which version you are using just cat /etc/os-release\n","wordCount":"302","inLanguage":"en","datePublished":"2016-08-23T00:00:00Z","dateModified":"2016-08-23T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://llazzaro.github.io/llazzaro.github.io/post/2016-08-23-bluehydra-raspberrypi/"},"publisher":{"@type":"Organization","name":"Leonardo Lazzaro","logo":{"@type":"ImageObject","url":"https://llazzaro.github.io/llazzaro.github.io/favicon.ico"}}}</script>
+</head>
+<body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+<header class=header>
+<nav class=nav>
+<div class=logo>
+<a href=https://llazzaro.github.io/llazzaro.github.io accesskey=h title="Leonardo Lazzaro (Alt + H)">Leonardo Lazzaro</a>
+<span class=logo-switches>
+<button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+</button>
+</span>
+</div>
+<ul id=menu>
+<li>
+<a href=https://llazzaro.github.io/llazzaro.github.io/ title=Home>
+<span>Home</span>
+</a>
+</li>
+<li>
+<a href=https://llazzaro.github.io/llazzaro.github.io/post/ title=Archives>
+<span>Archives</span>
+</a>
+</li>
+<li>
+<a href=https://llazzaro.github.io/llazzaro.github.io/about/ title=About>
+<span>About</span>
+</a>
+</li>
+<li>
+<a href=https://llazzaro.github.io/llazzaro.github.io/photography/ title=Photography>
+<span>Photography</span>
+</a>
+</li>
+</ul>
+</nav>
+</header>
+<main class=main>
+<article class=post-single>
+<header class=post-header>
+<h1 class=post-title>
+Installing bluehydra on raspberry pi
+</h1>
+<div class=post-meta><span title="2016-08-23 00:00:00 +0000 UTC">2016-08-23</span>
+</div>
+</header>
+<div class=post-content><h2 id=introduction>Introduction<a hidden class=anchor aria-hidden=true href=#introduction>#</a></h2>
+<p>ap
+BlueHydra is a Bluetooth device discovery service built on top of the bluez library.
+In this tutorial we are going to give the steps to install bluehydra on the rasperberry pi using Raspbian GNU/Linux 8 (jessie).
+If you are using raspbien wheezy, please see the Apendix</p>
+<h2 id=installing-ruby-with-rvm>Installing ruby with rvm<a hidden class=anchor aria-hidden=true href=#installing-ruby-with-rvm>#</a></h2>
+<p>There are several ways to install ruby, the one I prefer is with rvm.
+rvm is is a command-line tool which allows you to easily install, manage, and work with multiple ruby environments.
+Download and install rvm with:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash> curl -L https://get.rvm.io <span class=p>|</span> bash -s stable --ruby</code></pre></div>
+<p>This will probably raise the error:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash> gpg: Can<span class=err>&#39;</span>t check signature: public key not found</code></pre></div>
+<p>Read the instructions to download the signatures from the error..</p>
+<p>Now let&rsquo;s check that we are using a correct ruby version:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash> rvm current</code></pre></div>
+<p>In the following steps we are going to use blunder to install ruby gems.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash> sudo gem install bundler</code></pre></div>
+<p>Now that we have ruby working on the raspberry pi, we are going to install the dependencies.</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash> sudo apt-get install python-bluez python-dbus sqlite3 bluez-tools ruby-dev bluez bluez-test-scripts python-bluez python-dbus libsqlite3-dev ubertooth</code></pre></div>
+<h2 id=bluehydra-instalation>BlueHydra Instalation<a hidden class=anchor aria-hidden=true href=#bluehydra-instalation>#</a></h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash> git clone https://github.com/pwnieexpress/blue_hydra.git
+ <span class=nb>cd</span> blue_hydra
+ bundle install</code></pre></div>
+<h2 id=final-result>Final Result<a hidden class=anchor aria-hidden=true href=#final-result>#</a></h2>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>sudo ./bin/blue_hydra</code></pre></div>
+<p>If everything is right, you should see the bluehydra working.</p>
+<p><img loading=lazy src="https://github.com/llazzaro/llazzaro.github.io/blob/master/_posts/blue_hydra.png?raw=true" alt="alt text" title="Blue_hydra on raspbian jessie">
+</p>
+<p>if you have a python import error on bluezutils, try to download bluezutils.py and copy it to the bin directory of blue hydra:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash> wget https://raw.githubusercontent.com/pauloborges/bluez/master/test/bluezutils.py</code></pre></div>
+<h1 id=apendix>Apendix<a hidden class=anchor aria-hidden=true href=#apendix>#</a></h1>
+<h2 id=not-working-in-wheezy>Not working in wheezy<a hidden class=anchor aria-hidden=true href=#not-working-in-wheezy>#</a></h2>
+<p>When I began writting this tutorial I was using wheezy, but since I got a lot of issues with dbus and errors like:</p>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>E, <span class=o>[</span>2016-08-24T00:19:43.606500 <span class=c1>#27471] ERROR -- :   File &#34;/home/pi/blue_hydra/bin/test-discovery&#34;, line 15, in &lt;module&gt;</span>
+E, <span class=o>[</span>2016-08-24T00:19:43.606813 <span class=c1>#27471] ERROR -- :     import bluezutils</span></code></pre></div>
+<div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash>dbus.exceptions.DBusException: org.freedesktop.DBus.Error.UnknownMethod: Method <span class=s2>&#34;GetManagedObjects&#34;</span> with signature <span class=s2>&#34;&#34;</span> on interface <span class=s2>&#34;org.freedesktop.DBus.ObjectManager&#34;</span> doesn<span class=err>&#39;</span>t exist</code></pre></div>
+<p>To check which version you are using just cat /etc/os-release</p>
+</div>
+<footer class=post-footer>
+</footer>
+</article>
+</main>
+<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a>
+<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
+</body>
+</html>
