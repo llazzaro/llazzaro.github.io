@@ -9,14 +9,14 @@
 However when you get the concept of recursion scheme, foldr becames a magical function. In most of the cases I used simple explicit recursion calls, like this one:
 sum:: Num a => [a] -> a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intuitive to read, but what if we try to compute prod?">
 <meta name=author content>
-<link rel=canonical href=https://llazzaro.github.io/llazzaro.github.io/post/2014-04-18-magic-tricks-with-fold-functions/>
-<link crossorigin=anonymous href=/llazzaro.github.io/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/llazzaro.github.io/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
-<link rel=icon href=https://llazzaro.github.io/llazzaro.github.io/favicon.ico>
-<link rel=icon type=image/png sizes=16x16 href=https://llazzaro.github.io/llazzaro.github.io/favicon-16x16.png>
-<link rel=icon type=image/png sizes=32x32 href=https://llazzaro.github.io/llazzaro.github.io/favicon-32x32.png>
-<link rel=apple-touch-icon href=https://llazzaro.github.io/llazzaro.github.io/apple-touch-icon.png>
-<link rel=mask-icon href=https://llazzaro.github.io/llazzaro.github.io/safari-pinned-tab.svg>
+<link rel=canonical href=https://www.lazzaro.com.ar/post/2014-04-18-magic-tricks-with-fold-functions/>
+<link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://www.lazzaro.com.ar/favicon.ico>
+<link rel=icon type=image/png sizes=16x16 href=https://www.lazzaro.com.ar/favicon-16x16.png>
+<link rel=icon type=image/png sizes=32x32 href=https://www.lazzaro.com.ar/favicon-32x32.png>
+<link rel=apple-touch-icon href=https://www.lazzaro.com.ar/apple-touch-icon.png>
+<link rel=mask-icon href=https://www.lazzaro.com.ar/safari-pinned-tab.svg>
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <noscript>
@@ -27,7 +27,7 @@ sum:: Num a => [a] -> a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intui
 However when you get the concept of recursion scheme, foldr becames a magical function. In most of the cases I used simple explicit recursion calls, like this one:
 sum:: Num a => [a] -> a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intuitive to read, but what if we try to compute prod?">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://llazzaro.github.io/llazzaro.github.io/post/2014-04-18-magic-tricks-with-fold-functions/"><meta property="article:section" content="post">
+<meta property="og:url" content="https://www.lazzaro.com.ar/post/2014-04-18-magic-tricks-with-fold-functions/"><meta property="article:section" content="post">
 <meta property="article:published_time" content="2014-04-18T00:00:00+00:00">
 <meta property="article:modified_time" content="2014-04-18T00:00:00+00:00">
 <meta name=twitter:card content="summary">
@@ -35,15 +35,15 @@ sum:: Num a => [a] -> a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intui
 <meta name=twitter:description content="The first time you deal with foldr seems to be nothing more than a new function like map, filter.
 However when you get the concept of recursion scheme, foldr becames a magical function. In most of the cases I used simple explicit recursion calls, like this one:
 sum:: Num a => [a] -> a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intuitive to read, but what if we try to compute prod?">
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://llazzaro.github.io/llazzaro.github.io/post/"},{"@type":"ListItem","position":3,"name":"Magic tricks with fold functions","item":"https://llazzaro.github.io/llazzaro.github.io/post/2014-04-18-magic-tricks-with-fold-functions/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Magic tricks with fold functions","name":"Magic tricks with fold functions","description":"The first time you deal with foldr seems to be nothing more than a new function like map, filter.\nHowever when you get the concept of recursion scheme, foldr becames a magical function. In most of the cases I used simple explicit recursion calls, like this one:\nsum:: Num a =\u0026gt; [a] -\u0026gt; a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intuitive to read, but what if we try to compute prod?","keywords":[],"articleBody":"The first time you deal with foldr seems to be nothing more than a new function like map, filter.\nHowever when you get the concept of recursion scheme, foldr becames a magical function. In most of the cases I used simple explicit recursion calls, like this one:\nsum:: Num a = [a] - a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intuitive to read, but what if we try to compute prod?\nprod:: Num a = [a] - a prod [] = 1 prod (x:xs) = x * (sum xs) Nice! but we feel that this idea we wrote the same except for base case and the function we want to use. Actually in sum we hardcoded “+” and in prod we hardcoded “*”, the same with the base case.\nThis is were recursion scheme cames to save our life and using foldr we can avoid “hardcoding” the funcion and base case. Lets see some magic, simply magic to compute “sum”:\nsum = foldr (+) 0 yes!, this new function “sum” does the same as the first one. The first time I saw this my brain was throwing exceptions…WTF is going on here? Well actually is pretty simple, but we need to look at the definition of foldr:\nfoldr:: (a-b-b) - b - [a] - b foldr combine base [] = base foldr combine base (x:xs) = combine x (foldr combine base xs) if we pass the list [1..13] to the lastest version of sum, we can think that foldr will do this\n(1+(2+(3+(4+(5+(6+(7+(8+(9+(10+(11+(12+(13+0))))))))))))) so we can think of foldr as a way to associate parenthesis in out “expressions”. So, foldl instead will associate this way:\n(((((((((((((0+1)+2)+3)+4)+5)+6)+7)+8)+9)+10)+11)+12)+13) For sum there is no difference in the result for obvious reasons.\nAnother interesing problem to study is to try dropWhile with foldr. I read the solution of dropWhile (on the Monad.Reader issue 6) after trying many ideas. Let’s look at my first idea:\nlet dropWhile' predicate = foldr (\\x rec - if predicate x then rec else x:rec) [] Let’s try this with dropWhile':\ndropWhile' (3) [1,1,1,1,3,4,5,6] Which returns [3,4,5,6] and I was pretty happy with this function until I tried:\ndropWhile' (odd) [1,1,1,1,3,4,5,6] Which returns [4,6] and it makes obvious where the error is. Well the first working solution (and human understandable) that Monad.Reader suggest is to use high order.\nlet dropWhile'' predicate list= (foldr (\\x rec - if precidate x then rec.tail else id) id list) list Yes! Magic again and a pretty cool idea of using tail as a “filter” and id for leaving what we want.\nBut a different approach and that will be using primitive recursion…\nrecr:: b-(a-[a]-b-b) - [a] - b recr base combine [] = base recr base combine (x:xs) = f x xs (recr base combine xs) And now lets define dropWhile with recr:\ndropWhile''' = recr [] (\\x xs rec - if length xs == 0 then [x] else rec) recr is not in the Prelude, not sure why. With recr is pretty is to write the function insert, which is pretty hard to write it with fold!\ninsert x = recr [x] (\\y ys zs - if x  y then (x:y:ys) else (y:zs)) ","wordCount":"539","inLanguage":"en","datePublished":"2014-04-18T00:00:00Z","dateModified":"2014-04-18T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://llazzaro.github.io/llazzaro.github.io/post/2014-04-18-magic-tricks-with-fold-functions/"},"publisher":{"@type":"Organization","name":"Leonardo Lazzaro","logo":{"@type":"ImageObject","url":"https://llazzaro.github.io/llazzaro.github.io/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://www.lazzaro.com.ar/post/"},{"@type":"ListItem","position":3,"name":"Magic tricks with fold functions","item":"https://www.lazzaro.com.ar/post/2014-04-18-magic-tricks-with-fold-functions/"}]}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Magic tricks with fold functions","name":"Magic tricks with fold functions","description":"The first time you deal with foldr seems to be nothing more than a new function like map, filter.\nHowever when you get the concept of recursion scheme, foldr becames a magical function. In most of the cases I used simple explicit recursion calls, like this one:\nsum:: Num a =\u0026gt; [a] -\u0026gt; a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intuitive to read, but what if we try to compute prod?","keywords":[],"articleBody":"The first time you deal with foldr seems to be nothing more than a new function like map, filter.\nHowever when you get the concept of recursion scheme, foldr becames a magical function. In most of the cases I used simple explicit recursion calls, like this one:\nsum:: Num a = [a] - a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intuitive to read, but what if we try to compute prod?\nprod:: Num a = [a] - a prod [] = 1 prod (x:xs) = x * (sum xs) Nice! but we feel that this idea we wrote the same except for base case and the function we want to use. Actually in sum we hardcoded “+” and in prod we hardcoded “*”, the same with the base case.\nThis is were recursion scheme cames to save our life and using foldr we can avoid “hardcoding” the funcion and base case. Lets see some magic, simply magic to compute “sum”:\nsum = foldr (+) 0 yes!, this new function “sum” does the same as the first one. The first time I saw this my brain was throwing exceptions…WTF is going on here? Well actually is pretty simple, but we need to look at the definition of foldr:\nfoldr:: (a-b-b) - b - [a] - b foldr combine base [] = base foldr combine base (x:xs) = combine x (foldr combine base xs) if we pass the list [1..13] to the lastest version of sum, we can think that foldr will do this\n(1+(2+(3+(4+(5+(6+(7+(8+(9+(10+(11+(12+(13+0))))))))))))) so we can think of foldr as a way to associate parenthesis in out “expressions”. So, foldl instead will associate this way:\n(((((((((((((0+1)+2)+3)+4)+5)+6)+7)+8)+9)+10)+11)+12)+13) For sum there is no difference in the result for obvious reasons.\nAnother interesing problem to study is to try dropWhile with foldr. I read the solution of dropWhile (on the Monad.Reader issue 6) after trying many ideas. Let’s look at my first idea:\nlet dropWhile' predicate = foldr (\\x rec - if predicate x then rec else x:rec) [] Let’s try this with dropWhile':\ndropWhile' (3) [1,1,1,1,3,4,5,6] Which returns [3,4,5,6] and I was pretty happy with this function until I tried:\ndropWhile' (odd) [1,1,1,1,3,4,5,6] Which returns [4,6] and it makes obvious where the error is. Well the first working solution (and human understandable) that Monad.Reader suggest is to use high order.\nlet dropWhile'' predicate list= (foldr (\\x rec - if precidate x then rec.tail else id) id list) list Yes! Magic again and a pretty cool idea of using tail as a “filter” and id for leaving what we want.\nBut a different approach and that will be using primitive recursion…\nrecr:: b-(a-[a]-b-b) - [a] - b recr base combine [] = base recr base combine (x:xs) = f x xs (recr base combine xs) And now lets define dropWhile with recr:\ndropWhile''' = recr [] (\\x xs rec - if length xs == 0 then [x] else rec) recr is not in the Prelude, not sure why. With recr is pretty is to write the function insert, which is pretty hard to write it with fold!\ninsert x = recr [x] (\\y ys zs - if x  y then (x:y:ys) else (y:zs)) ","wordCount":"539","inLanguage":"en","datePublished":"2014-04-18T00:00:00Z","dateModified":"2014-04-18T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.lazzaro.com.ar/post/2014-04-18-magic-tricks-with-fold-functions/"},"publisher":{"@type":"Organization","name":"Leonardo Lazzaro","logo":{"@type":"ImageObject","url":"https://www.lazzaro.com.ar/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
-<a href=https://llazzaro.github.io/llazzaro.github.io accesskey=h title="Leonardo Lazzaro (Alt + H)">Leonardo Lazzaro</a>
+<a href=https://www.lazzaro.com.ar accesskey=h title="Leonardo Lazzaro (Alt + H)">Leonardo Lazzaro</a>
 <span class=logo-switches>
 <button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </button>
@@ -51,22 +51,22 @@ sum:: Num a => [a] -> a sum [] = 0 sum (x:xs) = x + (sum xs) Very easy and intui
 </div>
 <ul id=menu>
 <li>
-<a href=https://llazzaro.github.io/llazzaro.github.io/ title=Home>
+<a href=https://www.lazzaro.com.ar/ title=Home>
 <span>Home</span>
 </a>
 </li>
 <li>
-<a href=https://llazzaro.github.io/llazzaro.github.io/post/ title=Archives>
+<a href=https://www.lazzaro.com.ar/post/ title=Archives>
 <span>Archives</span>
 </a>
 </li>
 <li>
-<a href=https://llazzaro.github.io/llazzaro.github.io/about/ title=About>
+<a href=https://www.lazzaro.com.ar/about/ title=About>
 <span>About</span>
 </a>
 </li>
 <li>
-<a href=https://llazzaro.github.io/llazzaro.github.io/photography/ title=Photography>
+<a href=https://www.lazzaro.com.ar/photography/ title=Photography>
 <span>Photography</span>
 </a>
 </li>
