@@ -3,14 +3,13 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>Using JabRef with LibreOffice | Leonardo Lazzaro</title>
-<meta name=keywords content>
+<title>Using JabRef with LibreOffice | Leonardo Lazzaro</title><meta name=keywords content>
 <meta name=description content="I Started to use JabRef as a database of BibTex reference for using it with LaTex and LibreOffce. Googling around I found a post that were using a plugin to integrate JabRef with Libreoffice, however it was old and today is not necessary to instal a plugin. Steps to integrate LibreOffice with JabRef
  Configure LibreOffice  Go to Preferences > LibreOffice > Advanced and make sure that &ldquo;Use a Java runtime environment&rdquo; is checked and that a runtime is properly selected in the installed list.">
 <meta name=author content>
 <link rel=canonical href=https://www.lazzaro.com.ar/post/2016-06-27-using-jabref-with-libreoffice/>
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
-<script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
+<script defer crossorigin=anonymous src=/assets/js/highlight.min.4dcb3c4f38462f66c6b6137227726f5543cb934cca9788f041c087e374491df2.js integrity="sha256-Tcs8TzhGL2bGthNyJ3JvVUPLk0zKl4jwQcCH43RJHfI=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=https://www.lazzaro.com.ar/favicon.ico>
 <link rel=icon type=image/png sizes=16x16 href=https://www.lazzaro.com.ar/favicon-16x16.png>
 <link rel=icon type=image/png sizes=32x32 href=https://www.lazzaro.com.ar/favicon-32x32.png>
@@ -19,9 +18,7 @@
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <noscript>
-<style>#theme-toggle,.top-link{display:none}</style>
-<style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
-</noscript><meta property="og:title" content="Using JabRef with LibreOffice">
+<style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="Using JabRef with LibreOffice">
 <meta property="og:description" content="I Started to use JabRef as a database of BibTex reference for using it with LaTex and LibreOffce. Googling around I found a post that were using a plugin to integrate JabRef with Libreoffice, however it was old and today is not necessary to instal a plugin. Steps to integrate LibreOffice with JabRef
  Configure LibreOffice  Go to Preferences > LibreOffice > Advanced and make sure that &ldquo;Use a Java runtime environment&rdquo; is checked and that a runtime is properly selected in the installed list.">
 <meta property="og:type" content="article">
@@ -34,9 +31,8 @@
  Configure LibreOffice  Go to Preferences > LibreOffice > Advanced and make sure that &ldquo;Use a Java runtime environment&rdquo; is checked and that a runtime is properly selected in the installed list.">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://www.lazzaro.com.ar/post/"},{"@type":"ListItem","position":3,"name":"Using JabRef with LibreOffice","item":"https://www.lazzaro.com.ar/post/2016-06-27-using-jabref-with-libreoffice/"}]}</script>
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Using JabRef with LibreOffice","name":"Using JabRef with LibreOffice","description":"I Started to use JabRef as a database of BibTex reference for using it with LaTex and LibreOffce. Googling around I found a post that were using a plugin to integrate JabRef with Libreoffice, however it was old and today is not necessary to instal a plugin. Steps to integrate LibreOffice with JabRef\n Configure LibreOffice  Go to Preferences \u0026gt; LibreOffice \u0026gt; Advanced and make sure that \u0026ldquo;Use a Java runtime environment\u0026rdquo; is checked and that a runtime is properly selected in the installed list.","keywords":[],"articleBody":"I Started to use JabRef as a database of BibTex reference for using it with LaTex and LibreOffce. Googling around I found a post that were using a plugin to integrate JabRef with Libreoffice, however it was old and today is not necessary to instal a plugin. Steps to integrate LibreOffice with JabRef\n Configure LibreOffice  Go to Preferences  LibreOffice  Advanced and make sure that “Use a Java runtime environment” is checked and that a runtime is properly selected in the installed list. Advanced settings should look like this:\nConfigure JabRef to use LibreOffice   Go to Tools - OpenOffice/LibreOffice connection. A new tab will appear on the left and select settings on the tab  Start using the “cite” button to add cites on your articles, when you are done click on the icon for manual connect and use the path of LibreOffice, which usually is /Applications/LibreOffice.app.\n","wordCount":"147","inLanguage":"en","datePublished":"2016-06-27T00:00:00Z","dateModified":"2016-06-27T00:00:00Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.lazzaro.com.ar/post/2016-06-27-using-jabref-with-libreoffice/"},"publisher":{"@type":"Organization","name":"Leonardo Lazzaro","logo":{"@type":"ImageObject","url":"https://www.lazzaro.com.ar/favicon.ico"}}}</script>
-</head>
-<body id=top>
-<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
+</head><body id=top>
+<script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script>
 <header class=header>
 <nav class=nav>
 <div class=logo>
@@ -45,68 +41,41 @@
 <button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </button>
 </span>
-</div>
-<ul id=menu>
+</div><ul id=menu>
 <li>
 <a href=https://www.lazzaro.com.ar/ title=Home>
 <span>Home</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://www.lazzaro.com.ar/post/ title=Archives>
 <span>Archives</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://www.lazzaro.com.ar/about/ title=About>
 <span>About</span>
 </a>
-</li>
-<li>
+</li><li>
 <a href=https://www.lazzaro.com.ar/photography/ title=Photography>
 <span>Photography</span>
 </a>
-</li>
-</ul>
-</nav>
-</header>
-<main class=main>
+</li></ul></nav></header><main class=main>
 <article class=post-single>
 <header class=post-header>
 <h1 class=post-title>
 Using JabRef with LibreOffice
-</h1>
-<div class=post-meta><span title="2016-06-27 00:00:00 +0000 UTC">2016-06-27</span>
-</div>
-</header>
-<div class=post-content><p>I Started to use JabRef as a database of BibTex reference for using it with LaTex and LibreOffce.
+</h1><div class=post-meta><span title="2016-06-27 00:00:00 +0000 UTC">2016-06-27</span>
+</div></header><div class=post-content><p>I Started to use JabRef as a database of BibTex reference for using it with LaTex and LibreOffce.
 Googling around I found a <a href=http://homepage.agrl.ethz.ch/~eugsterw/knowhow/jabref-libreoffice/>post</a> that were using a plugin to integrate JabRef with Libreoffice, however it was old and today is not necessary to instal a plugin.
-Steps to integrate LibreOffice with JabRef</p>
-<ol>
-<li>Configure LibreOffice</li>
-</ol>
-<p>Go to <strong>Preferences > LibreOffice > Advanced</strong> and make sure that <em>&ldquo;Use a Java runtime environment&rdquo;</em> is checked and that a runtime is properly selected in the installed list.
-Advanced settings should look like this:</p>
-<p><img loading=lazy src=https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.16%20AM.png alt="alt text" title="Logo Title Text 1">
-</p>
-<ol start=2>
-<li>Configure JabRef to use LibreOffice</li>
-</ol>
-<ul>
-<li>Go to <strong>Tools -> OpenOffice/LibreOffice connection</strong>. A new tab will appear on the left and select settings on the tab</li>
-</ul>
-<p><img loading=lazy src=https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.25%20AM.png alt="alt text" title="Logo Title Text 1">
-</p>
-<p>Start using the &ldquo;cite&rdquo; button to add cites on your articles, when you are done click on the icon for manual connect and use the path of LibreOffice, which usually is <strong>/Applications/LibreOffice.app</strong>.</p>
-</div>
-<footer class=post-footer>
-</footer>
-</article>
-</main>
-<a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+Steps to integrate LibreOffice with JabRef</p><ol>
+<li>Configure LibreOffice</li></ol><p>Go to <strong>Preferences > LibreOffice > Advanced</strong> and make sure that <em>&ldquo;Use a Java runtime environment&rdquo;</em> is checked and that a runtime is properly selected in the installed list.
+Advanced settings should look like this:</p><p><img loading=lazy src=https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.16%20AM.png alt="alt text" title="Logo Title Text 1">
+</p><ol start=2>
+<li>Configure JabRef to use LibreOffice</li></ol><ul>
+<li>Go to <strong>Tools -> OpenOffice/LibreOffice connection</strong>. A new tab will appear on the left and select settings on the tab</li></ul><p><img loading=lazy src=https://raw.githubusercontent.com/llazzaro/llazzaro.github.io/master/_posts/Screen%20Shot%202016-06-28%20at%2012.00.25%20AM.png alt="alt text" title="Logo Title Text 1">
+</p><p>Start using the &ldquo;cite&rdquo; button to add cites on your articles, when you are done click on the icon for manual connect and use the path of LibreOffice, which usually is <strong>/Applications/LibreOffice.app</strong>.</p></div><footer class=post-footer>
+</footer></article></main><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
 </a>
-<script>let menu=document.getElementById('menu');menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener("click",function(b){b.preventDefault();var a=this.getAttribute("href").substr(1);window.matchMedia('(prefers-reduced-motion: reduce)').matches?document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(a)}']`).scrollIntoView({behavior:"smooth"}),a==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${a}`)})})</script>
+<script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(t){t.preventDefault();var e=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(e)}']`).scrollIntoView({behavior:"smooth"}),e==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${e}`)})})</script>
 <script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script>
-<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove('dark'),localStorage.setItem("pref-theme",'light')):(document.body.classList.add('dark'),localStorage.setItem("pref-theme",'dark'))})</script>
-</body>
-</html>
+<script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script>
+</body></html>
