@@ -53,12 +53,6 @@ footnoteReturnLinkContents = "^"
   url = "/about/"
   weight = 3
 
-[[menu.main]]
-  identifier = "photography"
-  name = "Photography"
-  url = "/photography/"
-  weight = 4
-
 [params]
   customCSS = []
   dateFormat = "2006-01-02"
