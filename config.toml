@@ -1,57 +1,79 @@
 baseURL = "https://www.lazzaro.com.ar"
-defaultContentLanguage = "en"
-hasCJKLanguage = true
 languageCode = "en"
-paginate = 3
-theme = "PaperMod"
+defaultContentLanguage = "en"
 title = "Leonardo Lazzaro"
-darkMode = false
+theme = "PaperMod"
 
-disqusShortname = ""
-googleAnalytics = ""
-pygmentsUseClasses = true
+# Pagination
+[pagination]
+  pagerSize = 10
 
-footnoteReturnLinkContents = "^"
-
-
-[author]
+# Parameters
+[params]
+  description = "Software engineer, Django expert, and author of 'Building Web Applications with Django'"
+  dateformat = "2006-01-02"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  displayFullLangName = false
+  disableSpecial1stPost = false
+  disableScrollToTop = false
+  hideMeta = false
+  hideSummary = false
+  showtoc = false
+  tocopen = false
+  showBreadCrumbs = false
+  share = false
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowAllPagesInArchive = false
+  ShowPageNums = true
+  ShowToc = true
+  TocFuzzy = true
+  TocLevels = 3
+  UseHugoToc = true
+  comments = false
+  
+  [params.author]
     name = "Leonardo Lazzaro"
-    abstract = "I'm a software engineer and a coffee enthusiast in Japan. My primary interest lies in the area of natural language processing."
+    bio = "Software engineer and Django expert based in Japan"
+    
+  [params.social]
+    github = "llazzaro"
+    twitter = "llazzaro"
+    linkedin = "llazzaro"
+    
+  [params.HomeInfoParams]
+    Title = "Hi there!"
+    Content = "Welcome to my personal blog where I write about technology, programming, and other things I find interesting."
 
-
-[markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
-  [markup.highlight]
-    anchorLineNos = false
-    codeFences = true
-    guessSyntax = false
-    hl_Lines = ''
-    lineAnchors = ''
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = true
-    noClasses = true
-    style = 'monokai'
-    tabWidth = 4
-
-[[menu.main]]
-  identifier = "home"
-  name = "Home"
-  url = "/"
-  weight = 1
-[[menu.main]]
-  identifier = "archives"
-  name = "Archives"
-  url = "/post/"
-  weight = 2
-[[menu.main]]
-  identifier = "about"
-  name = "About"
-  url = "/about/"
-  weight = 3
+# Menu
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+    
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 2
+    
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 3
+    
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 4
 
 [params]
   customCSS = []

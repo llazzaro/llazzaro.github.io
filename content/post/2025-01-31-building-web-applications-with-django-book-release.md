@@ -1,11 +1,12 @@
 +++
-title = "Building Web Applications with Django: Master Django 4.2 from Scratch"
-date = "2025-01-31"
-lang = "en"
-description = "Learn Django 4.2 with my new comprehensive guide - perfect for beginners with no Python experience. Build real-world web applications with hands-on projects."
-keywords = ["Django tutorial", "Python web development", "Django 4.2", "web development beginners", "Django book", "learn Django", "Python programming"]
-tags = ["Django", "Python", "Web Development", "Book", "Tutorial", "Programming"]
-categories = ["Programming", "Web Development"]
+title: "Building Web Applications with Django: Master Django 4.2 from Scratch"
+date: 2025-01-31
+description: "Announcing my new book that teaches Django 4.2 from the ground up. Perfect for beginners and experienced developers alike."
+tags: ["Django", "Python", "Web Development", "Book", "Tutorial"]
+categories: ["Programming", "Web Development"]
+featuredImage: "/images/django-book-cover.jpg"
+featuredImagePreview: "/images/django-book-cover-preview.jpg"
+draft: false
 +++
 
 ## 🚀 Exciting News: My New Django Book is Here!
