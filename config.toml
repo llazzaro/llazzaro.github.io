@@ -12,6 +12,7 @@ theme = "PaperMod"
 [params]
   description = "Software engineer, Django expert, and author of 'Building Web Applications with Django'"
   dateformat = "2006-01-02"
+  dateFormat = "2006-01-02"
   defaultTheme = "auto"
   disableThemeToggle = false
   displayFullLangName = false
@@ -35,6 +36,14 @@ theme = "PaperMod"
   TocLevels = 3
   UseHugoToc = true
   comments = false
+  customCSS = []
+  enableFullRSS = true
+  enableHanEmph = true
+  enableMathjax = true
+  favicon = "/favicon.ico"
+  keywords = []
+  darkmode = false
+  hideFooter = true
   
   [params.author]
     name = "Leonardo Lazzaro"
@@ -48,6 +57,13 @@ theme = "PaperMod"
   [params.HomeInfoParams]
     Title = "Hi there!"
     Content = "Welcome to my personal blog where I write about technology, programming, and other things I find interesting."
+
+  [params.utterances]
+    enable = false
+    repo = ""
+    issue_term = "pathname"
+    label = "Comment"
+    theme = "github-light"
 
 # Menu
 [menu]
@@ -75,30 +91,7 @@ theme = "PaperMod"
     url = "/about/"
     weight = 4
 
-[params]
-  customCSS = []
-  dateFormat = "2006-01-02"
-  description = ""
-  enableFullRSS = true
-  enableHanEmph = true
-  enableMathjax = true
-  favicon = "/favicon.ico"
-  footnote = "Follow me on <a class=link href=https://github.com/llazzaro>GitHub</a> or <a class=link href=https://twitter.com/llazzaro>Twitter</a> | <a class=link href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh target=_blank rel=noopener>CC BY-NC-SA 4.0</a>"
-  keywords = []
-  darkmode = false
-  hideFooter = true
-
-
-# see https://utteranc.es for installation guide
-[params.utterances]
-  enable = false
-  repo = ""
-  issue_term = "pathname"
-  label = "Comment"
-  theme = "github-light"
-
 [taxonomies]
-category = "categories"
-tag = "tags"
-series = "series"
-
+  category = "categories"
+  tag = "tags"
+  series = "series"
