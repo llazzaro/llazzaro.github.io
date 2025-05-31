@@ -1,0 +1,152 @@
+# Hugo default ignore patterns
+/public/
+/resources/_gen/
+/.hugo_build.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*~
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment files
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Hugo build output
+public/
+
+# Hugo modules
+# Uncomment if you're using Hugo Modules
+# /public/
+# /resources/
+# /themes/
+
+# Debug logs
+*.log
+
+# Local development
+.hugo_build.lock
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-*
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Hugo Module files (if using Go Modules)
+# /vendor/
+
+# Hugo build output
+/public/
+
+# Hugo cache
+/resources/_gen/
+
+# Node modules if using any node tools
+node_modules/
+
+# Local development files
+.hugo_build.lock
+
+# Temporary files
+*.tmp
+*.swp
+*~
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Hugo modules
+go.mod
+go.sum
+
+# Local Netlify folder
+.netlify
+
+# Local development
+.hugo_build.lock
+
+# Hugo build output
+public/
+
+# Hugo cache
+tmp/
+
+# Debug logs
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
