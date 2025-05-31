@@ -1,100 +1,393 @@
 +++
-title = "Monitor linux statistics with grafana (munin replacement)"
+title = "Complete Linux System Monitoring with Grafana, InfluxDB & Telegraf (Munin Alternative)"
 date = "2016-08-18"
 lang = "en"
+description = "Step-by-step guide to set up modern Linux system monitoring with Grafana, InfluxDB, and Telegraf. Perfect replacement for Munin with real-time dashboards and alerting."
+keywords = ["Grafana", "InfluxDB", "Telegraf", "Linux monitoring", "system monitoring", "server monitoring", "Munin alternative", "DevOps"]
+tags = ["Grafana", "InfluxDB", "Telegraf", "Monitoring", "Linux", "DevOps", "Tutorial"]
+categories = ["DevOps", "Monitoring", "Linux"]
 +++
 
-This quick tutorial will guide you to install grafana to monitor a linux system.
-We also are going to save a history to an influx database.
+This comprehensive tutorial will guide you through setting up a modern Linux monitoring stack using **Grafana**, **InfluxDB**, and **Telegraf**. This powerful combination provides real-time system monitoring, beautiful dashboards, and historical data storage - making it an excellent replacement for traditional tools like Munin.
 
-# Installing InfluxDB
+## Why This Stack?
 
-For Ubuntu
+**Benefits over traditional monitoring:**
+- **Real-time monitoring** with sub-second granularity
+- **Beautiful, customizable dashboards** with Grafana
+- **Scalable time-series database** with InfluxDB
+- **Easy metric collection** with Telegraf
+- **Alerting capabilities** for proactive monitoring
+- **Modern web interface** accessible from anywhere
 
-{{< highlight bash >}}
+## Architecture Overview
+
+```
+Linux System → Telegraf → InfluxDB → Grafana → Dashboard
+```
+
+1. **Telegraf** collects system metrics (CPU, memory, disk, network)
+2. **InfluxDB** stores time-series data efficiently
+3. **Grafana** visualizes data with interactive dashboards
+
+---
+
+## Step 1: Installing InfluxDB
+
+### For Ubuntu/Debian:
+
+```bash
+# Add InfluxDB repository
 curl -sL https://repos.influxdata.com/influxdb.key | sudo apt-key add -
 source /etc/lsb-release
 echo "deb https://repos.influxdata.com/${DISTRIB_ID,,} ${DISTRIB_CODENAME} stable" | sudo tee /etc/apt/sources.list.d/influxdb.list
-{{< / highlight >}}
 
-Install and start theInfluxDB service:
-
-{{< highlight bash >}}
+# Install InfluxDB
 sudo apt-get update && sudo apt-get install influxdb
-sudo service influxdb start
-{{< / highlight >}}
+sudo systemctl start influxdb
+sudo systemctl enable influxdb
+```
 
-Now you can check at the port 8083 (for a local installation check http://localhost:3000)) that the InfluxDB is working.
+### For RHEL/CentOS:
 
-SCREENSHOT
+```bash
+# Add repository
+cat <<EOF | sudo tee /etc/yum.repos.d/influxdb.repo
+[influxdb]
+name = InfluxDB Repository - RHEL
+baseurl = https://repos.influxdata.com/rhel/\$releasever/\$basearch/stable
+enabled = 1
+gpgcheck = 1
+gpgkey = https://repos.influxdata.com/influxdb.key
+EOF
 
-Since InfluxDB default config is a little insecure let's change some settings:
+# Install
+sudo yum install influxdb
+sudo systemctl start influxdb
+sudo systemctl enable influxdb
+```
 
+### Secure InfluxDB Configuration
 
+Edit the configuration file for better security:
 
-{{< highlight bash >}}
+```bash
 sudo vim /etc/influxdb/influxdb.conf
-{{< / highlight >}}
+```
 
-Now search for *auth-enabled* and set it to true.
+**Key security settings:**
+```toml
+# Enable authentication
+[http]
+  auth-enabled = true
+  
+# Enable HTTPS (recommended for production)
+  https-enabled = true
+  https-certificate = "/etc/ssl/certs/influxdb.pem"
+```
 
-it's recommended to enable also *https-enabled*
-
-using the influx-cli create the admin user (remeber to start the service with influxd):
-
+**Create admin user:**
+```bash
+# Connect to InfluxDB
 influx
 
-{{< highlight sql >}}
-CREATE USER leonardo WITH PASSWORD 'use_secure_password' WITH ALL PRIVILEGES
-{{< / highlight >}}
+# Create admin user (replace with secure password)
+CREATE USER admin WITH PASSWORD 'secure_admin_password' WITH ALL PRIVILEGES
+exit
+```
 
-# Installing Grafana
-We need to download the official .deb file (please check the updated .deb here http://grafana.org/download/)
+**Restart InfluxDB:**
+```bash
+sudo systemctl restart influxdb
+```
 
-{{< highlight bash >}}
-wget https://grafanarel.s3.amazonaws.com/builds/grafana_3.1.1-1470047149_amd64.deb
-sudo apt-get install -y adduser libfontconfig
-sudo dpkg -i grafana_3.1.1-1470047149_amd64.deb
-sudo service grafana-server start
-{{< / highlight >}}
+---
 
-Now check that Grafana web interface is working on localhost at port 3000 (for a local installation check http://localhost:3000).
+## Step 2: Installing Grafana
 
-SCREENSHOT
+### Download and Install Latest Grafana:
 
-Sign up with a new user and then open the grafana configuration (/etc/grafana/grafana.ini) to uncomment *admin_user* and *admin_password*
+```bash
+# Get latest version (check https://grafana.com/grafana/download)
+wget https://dl.grafana.com/enterprise/release/grafana-enterprise_10.2.0_amd64.deb
+sudo apt-get install -y adduser libfontconfig1
+sudo dpkg -i grafana-enterprise_10.2.0_amd64.deb
 
-{{< highlight bash >}}
-admin_user = new_user
-admin_password = password
-{{< / highlight >}}
+# Start and enable Grafana
+sudo systemctl start grafana-server
+sudo systemctl enable grafana-server
+```
 
-Then restart grafana
+### Configure Grafana
 
-{{< highlight bash >}}
-sudo service grafana-server start
-{{< / highlight >}}
+Edit Grafana configuration:
+```bash
+sudo vim /etc/grafana/grafana.ini
+```
 
-Configure InfluxDB data source. Since telegraf database is not yet created an error is expected.
-Add the datasource as the following screenshot shows.
+**Key settings:**
+```ini
+[security]
+admin_user = admin
+admin_password = secure_grafana_password
 
-SCREENSHOT
+[server]
+http_port = 3000
+domain = your-server-domain.com
 
-# Collect and metrics reporting
+[smtp]
+enabled = true
+host = localhost:587
+# Configure for email alerts
+```
 
-Now we need a Grafana pluging to collect and report metrics, in this case we are going to use telegraf (https://github.com/influxdata/telegraf)
+**Restart Grafana:**
+```bash
+sudo systemctl restart grafana-server
+```
 
-{{< highlight bash >}}
-wget https://dl.influxdata.com/telegraf/releases/telegraf_1.0.0-beta3_amd64.deb
-sudo dpkg -i telegraf_1.0.0-beta3_amd64.deb
-{{< / highlight >}}
+**Access Grafana:**
+- URL: `http://your-server:3000`
+- Default: admin/admin (change immediately!)
 
-Next step is to configure the pluging. Telegraf can generate a file with specific inputs and outputs, you can use the -input-filter and -output-filter flags
+---
 
-{{< highlight bash >}}
-telegraf -sample-config -input-filter cpu:mem:net:swap -output-filter influxdb:kafka > telegraf.conf
-{{< / highlight >}}
+## Step 3: Setting Up Telegraf
 
-The last command will create a config to monitor CPU, memory, network and swap.
+### Install Telegraf:
 
-Now we need to add telegraf as a service.
+```bash
+# For Ubuntu/Debian
+wget https://dl.influxdata.com/telegraf/releases/telegraf_1.28.5_amd64.deb
+sudo dpkg -i telegraf_1.28.5_amd64.deb
+
+# For RHEL/CentOS
+wget https://dl.influxdata.com/telegraf/releases/telegraf-1.28.5.x86_64.rpm
+sudo yum localinstall telegraf-1.28.5.x86_64.rpm
+```
+
+### Generate Telegraf Configuration:
+
+```bash
+# Generate config for common system metrics
+telegraf config \
+  --input-filter cpu:mem:disk:diskio:net:netstat:swap:system \
+  --output-filter influxdb > /etc/telegraf/telegraf.conf
+```
+
+### Configure Telegraf:
+
+Edit the configuration:
+```bash
+sudo vim /etc/telegraf/telegraf.conf
+```
+
+**Key InfluxDB output settings:**
+```toml
+[[outputs.influxdb]]
+  urls = ["http://localhost:8086"]
+  database = "telegraf"
+  username = "telegraf_user"
+  password = "telegraf_password"
+
+# System monitoring inputs
+[[inputs.cpu]]
+  percpu = true
+  totalcpu = true
+
+[[inputs.disk]]
+  ignore_fs = ["tmpfs", "devtmpfs", "devfs"]
+
+[[inputs.mem]]
+
+[[inputs.net]]
+
+[[inputs.system]]
+```
+
+**Create Telegraf database user in InfluxDB:**
+```bash
+influx -username admin -password secure_admin_password
+CREATE DATABASE telegraf
+CREATE USER telegraf_user WITH PASSWORD 'telegraf_password'
+GRANT ALL ON telegraf TO telegraf_user
+exit
+```
+
+**Start Telegraf:**
+```bash
+sudo systemctl start telegraf
+sudo systemctl enable telegraf
+```
+
+---
+
+## Step 4: Configure Grafana Data Source
+
+1. **Login to Grafana** (`http://your-server:3000`)
+2. **Go to Configuration → Data Sources**
+3. **Add InfluxDB data source:**
+   - **URL:** `http://localhost:8086`
+   - **Database:** `telegraf`
+   - **User:** `telegraf_user`
+   - **Password:** `telegraf_password`
+4. **Test connection** and save
+
+---
+
+## Step 5: Create Monitoring Dashboards
+
+### Import Pre-built Dashboard:
+
+1. **Go to Dashboards → Import**
+2. **Use dashboard ID:** `928` (Telegraph System Monitoring)
+3. **Configure data source** and import
+
+### Custom Dashboard Panels:
+
+**CPU Usage Panel:**
+```sql
+SELECT mean("usage_idle") FROM "cpu" 
+WHERE "host" = 'your-hostname' AND $timeFilter 
+GROUP BY time($__interval), "cpu"
+```
+
+**Memory Usage Panel:**
+```sql
+SELECT mean("used_percent") FROM "mem" 
+WHERE "host" = 'your-hostname' AND $timeFilter 
+GROUP BY time($__interval)
+```
+
+**Disk Usage Panel:**
+```sql
+SELECT mean("used_percent") FROM "disk" 
+WHERE "host" = 'your-hostname' AND $timeFilter 
+GROUP BY time($__interval), "path"
+```
+
+---
+
+## Step 6: Set Up Alerting
+
+### Configure Alert Channels:
+
+1. **Go to Alerting → Notification channels**
+2. **Add Email/Slack/Discord notifications**
+3. **Test notifications**
+
+### Create Alerts:
+
+**High CPU Alert:**
+- **Condition:** `avg() OF query(A, 5m, now) IS ABOVE 80`
+- **Evaluation:** Every `10s` for `30s`
+
+**Low Disk Space Alert:**
+- **Condition:** `avg() OF query(A, 5m, now) IS ABOVE 90`
+- **Evaluation:** Every `1m` for `2m`
+
+---
+
+## Troubleshooting Common Issues
+
+### InfluxDB Connection Issues:
+```bash
+# Check InfluxDB status
+sudo systemctl status influxdb
+
+# Check logs
+sudo journalctl -u influxdb -f
+
+# Test connection
+influx -host localhost -port 8086
+```
+
+### Telegraf Not Collecting Data:
+```bash
+# Test Telegraf configuration
+telegraf --config /etc/telegraf/telegraf.conf --test
+
+# Check Telegraf logs
+sudo journalctl -u telegraf -f
+
+# Verify metrics in InfluxDB
+influx -database telegraf
+SHOW MEASUREMENTS
+```
+
+### Grafana Dashboard Issues:
+```bash
+# Check Grafana logs
+sudo journalctl -u grafana-server -f
+
+# Verify data source connection
+# Go to Data Sources → Test
+```
+
+---
+
+## Performance Optimization
+
+### InfluxDB Tuning:
+```toml
+# /etc/influxdb/influxdb.conf
+[data]
+  cache-max-memory-size = "1g"
+  cache-snapshot-memory-size = "25m"
+
+[http]
+  max-connection-limit = 0
+```
+
+### Telegraf Collection Intervals:
+```toml
+# Adjust collection frequency
+[agent]
+  interval = "10s"
+  flush_interval = "10s"
+```
+
+---
+
+## Advanced Features
+
+### Custom Metrics:
+```bash
+# Add custom script monitoring
+[[inputs.exec]]
+  commands = ["/path/to/your/script.sh"]
+  data_format = "influx"
+```
+
+### Log Monitoring:
+```toml
+# Monitor log files
+[[inputs.tail]]
+  files = ["/var/log/nginx/access.log"]
+  from_beginning = false
+  data_format = "grok"
+```
+
+---
+
+## Conclusion
+
+You now have a powerful, modern monitoring solution that provides:
+
+- **Real-time system visibility**
+- **Historical trend analysis**
+- **Proactive alerting**
+- **Scalable architecture**
+- **Beautiful, customizable dashboards**
+
+This setup scales from single servers to enterprise environments and provides much more flexibility than traditional tools like Munin.
+
+**Next steps:**
+- Explore Grafana's advanced visualization options
+- Set up monitoring for applications and services
+- Implement log aggregation with the ELK stack
+- Consider using Grafana Cloud for managed hosting
+
+---
+
+*Questions or need help with advanced configurations? Connect with me on [GitHub](https://github.com/llazzaro) or [LinkedIn](https://www.linkedin.com/in/llazzaro/).*
