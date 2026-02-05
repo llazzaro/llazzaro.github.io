@@ -12,6 +12,12 @@ theme = "PaperMod"
 [pagination]
   pagerSize = 10
 
+# Markup: allow raw HTML in markdown
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
 # Parameters
 [params]
   # Social accounts (used for Twitter Cards)
