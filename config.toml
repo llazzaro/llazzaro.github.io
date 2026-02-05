@@ -12,12 +12,11 @@ theme = "PaperMod"
 [pagination]
   pagerSize = 10
 
-# Social accounts (used for Twitter Cards)
-[social]
-  twitter = "llazzaro"
-
 # Parameters
 [params]
+  # Social accounts (used for Twitter Cards)
+  [params.social]
+    twitter = "llazzaro"
   # SEO: Enable production environment for robots indexing
   env = "production"
   
