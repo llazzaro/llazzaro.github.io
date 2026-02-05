@@ -1,22 +1,30 @@
 +++
 title = "About"
-description = ""
+description = "Leonardo Lazzaro - Software Engineer, Django Expert & Author"
 date = "2022-02-12"
 aliases = []
 author = "Leonardo Lazzaro"
 +++
 
-Greetings! My name is @llazzaro, otherwise known as Leonardo Lazzaro, a computer scientist hailing from Argentina.
+Hi! I'm **Leonardo Lazzaro**, a software engineer originally from Argentina, now based in **Eindhoven, Netherlands**.
 
-Presently, I reside in the city of Eindhoven in The Netherlands. I have a strong passion for open source development, as it affords me the opportunity to expand my knowledge and give back to the community at the same time.
+## Author
 
-I have a particular interest in serverless architecture and achieving high scalability in my projects. My expertise lies primarily in the Python programming language, but I also enjoy working with Go Lang. Currently, I am in the process of learning Rust, as I believe it will add an extra level of versatility to my skill set.
+I'm the author of [**Building Web Applications with Django**](https://www.packtpub.com/product/building-web-applications-with-django/9781805125457), published by Packt. The book covers modern Django development practices for building scalable web applications.
 
-If you'd like to connect with me or learn more about my work, you can find me on:
+## What I Do
 
+I specialize in **Python** and **Django**, with a strong focus on building scalable, production-ready systems. I'm passionate about:
 
-* send me an [email](mailto:llazzaro@dc.uba.ar)
-* check my [github profile](https://github.com/llazzaro)
-* my website [lazzaro.com.ar](https://www.lazzaro.com.ar)
-* reach me on [twitter](https://twitter.com/llazzaro)
+- **Serverless architecture** and high-scalability solutions
+- **Open source development** — learning and contributing back to the community
+- **Go** for performance-critical applications
+- **Rust** — currently expanding my toolkit with systems programming
 
+## Connect
+
+- **LinkedIn:** [linkedin.com/in/llazzaro](https://www.linkedin.com/in/llazzaro/)
+- **GitHub:** [github.com/llazzaro](https://github.com/llazzaro)
+- **Twitter:** [twitter.com/llazzaro](https://twitter.com/llazzaro)
+- **Email:** [llazzaro@dc.uba.ar](mailto:llazzaro@dc.uba.ar)
+- **Website:** [lazzaro.com.ar](https://www.lazzaro.com.ar)

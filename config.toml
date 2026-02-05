@@ -47,7 +47,7 @@ theme = "PaperMod"
   
   [params.author]
     name = "Leonardo Lazzaro"
-    bio = "Software engineer and Django expert based in Japan"
+    bio = "Software engineer, Django expert, and author based in Eindhoven, Netherlands"
     
   [params.social]
     github = "llazzaro"
