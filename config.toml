@@ -4,13 +4,32 @@ defaultContentLanguage = "en"
 title = "Leonardo Lazzaro"
 theme = "PaperMod"
 
+# Enable production mode for proper indexing
+[build]
+  environment = "production"
+
 # Pagination
 [pagination]
   pagerSize = 10
 
+# Social accounts (used for Twitter Cards)
+[social]
+  twitter = "llazzaro"
+
 # Parameters
 [params]
-  description = "Software engineer, Django expert, and author of 'Ultimate Django for Web App Development Using Python'"
+  # SEO: Enable production environment for robots indexing
+  env = "production"
+  
+  # SEO: Meta description for homepage and fallback
+  description = "Leonardo Lazzaro - Software engineer, Django expert, and author of 'Ultimate Django for Web App Development Using Python'. Learn Django, Python web development, and modern backend practices."
+  
+  # SEO: Default image for Open Graph and Twitter Cards
+  images = ["/images/django-book-cover.jpg"]
+  
+  # SEO: Site-wide keywords
+  keywords = ["Django", "Python", "web development", "software engineering", "Django tutorial", "Python web framework", "backend development", "Leonardo Lazzaro", "Django book"]
+  
   dateformat = "2006-01-02"
   dateFormat = "2006-01-02"
   defaultTheme = "auto"
@@ -41,9 +60,17 @@ theme = "PaperMod"
   enableHanEmph = true
   enableMathjax = true
   favicon = "/favicon.ico"
-  keywords = []
   darkmode = false
   hideFooter = true
+  
+  # SEO: Schema.org structured data settings
+  [params.schema]
+    publisherType = "Person"
+    sameAs = [
+      "https://github.com/llazzaro",
+      "https://linkedin.com/in/llazzaro",
+      "https://x.com/llazzaro"
+    ]
   
   [params.author]
     name = "Leonardo Lazzaro"
@@ -135,6 +162,12 @@ theme = "PaperMod"
     name = "About"
     url = "/about/"
     weight = 5
+    
+  [[menu.main]]
+    identifier = "newsletter"
+    name = "Newsletter"
+    url = "/newsletter/"
+    weight = 6
 
 [taxonomies]
   category = "categories"
