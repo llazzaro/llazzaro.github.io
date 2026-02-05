@@ -4,6 +4,8 @@ date = "2011-05-07"
 lang = "en"
 +++
 
+> ⚠️ **Historical Post (2011):** This article is over 13 years old. PIL has been replaced by [Pillow](https://pillow.readthedocs.io/), which handles JPEG support automatically. Modern installation is simply `pip install Pillow`. Kept for historical reference.
+
 The first thing I check when I got this error was to check if libjpeg was installed.
 
 Lets try this

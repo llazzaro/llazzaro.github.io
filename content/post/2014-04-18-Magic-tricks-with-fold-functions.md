@@ -4,6 +4,7 @@ date = "2014-04-18"
 lang = "en"
 +++
 
+> 📚 **Classic Content (2014):** While this post is from 2014, the concepts of fold functions and recursion schemes in Haskell remain timeless and still apply today.
 
 The first time you deal with foldr seems to be nothing more than a new function like map, filter.
 

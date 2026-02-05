@@ -4,6 +4,8 @@ date = "2016-08-23"
 lang = "en"
 +++
 
+> ⚠️ **Historical Post (2016):** This article is from 2016 and references Raspbian Jessie. BlueHydra, Ruby versions, and Raspberry Pi OS have all changed significantly. The [BlueHydra project](https://github.com/pwnieexpress/blue_hydra) may no longer be actively maintained. Kept for historical reference.
+
 ## Introduction
 ap
 BlueHydra is a Bluetooth device discovery service built on top of the bluez library.

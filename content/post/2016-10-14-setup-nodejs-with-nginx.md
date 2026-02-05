@@ -4,6 +4,8 @@ date = "2016-10-14"
 lang = "en"
 +++
 
+> ⚠️ **Historical Post (2016):** This tutorial is from 2016 and references Node.js v4.x. Current LTS is v20+. While the nginx reverse proxy concepts remain valid, use modern package managers like `nvm` for Node.js and check the [PM2 documentation](https://pm2.keymetrics.io/) for current best practices.
+
 ## Introduction
 
 Node.js is a JavaScript runtime built on Chrome V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.

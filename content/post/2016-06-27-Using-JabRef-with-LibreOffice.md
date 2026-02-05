@@ -4,6 +4,8 @@ date = "2016-06-27"
 lang = "en"
 +++
 
+> ⚠️ **Historical Post (2016):** This article is from 2016. JabRef and LibreOffice have evolved significantly since then. Please check the [official JabRef documentation](https://docs.jabref.org/) for current integration instructions.
+
 I Started to use JabRef as a database of BibTex reference for using it with LaTex and LibreOffce.
 Googling around I found a [post](http://homepage.agrl.ethz.ch/~eugsterw/knowhow/jabref-libreoffice/) that were using a plugin to integrate JabRef with Libreoffice, however it was old and today is not necessary to instal a plugin.
 Steps to integrate LibreOffice with JabRef

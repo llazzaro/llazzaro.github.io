@@ -8,6 +8,8 @@ tags = ["Grafana", "InfluxDB", "Telegraf", "Monitoring", "Linux", "DevOps", "Tut
 categories = ["DevOps", "Monitoring", "Linux"]
 +++
 
+> ⚠️ **Historical Post (2016):** This tutorial is from 2016. While the general concepts remain valid, Grafana, InfluxDB, and Telegraf have had major version updates with changed configurations and improved features. Check the official documentation for [Grafana](https://grafana.com/docs/), [InfluxDB](https://docs.influxdata.com/), and [Telegraf](https://docs.influxdata.com/telegraf/) for current installation guides.
+
 This comprehensive tutorial will guide you through setting up a modern Linux monitoring stack using **Grafana**, **InfluxDB**, and **Telegraf**. This powerful combination provides real-time system monitoring, beautiful dashboards, and historical data storage - making it an excellent replacement for traditional tools like Munin.
 
 ## Why This Stack?
