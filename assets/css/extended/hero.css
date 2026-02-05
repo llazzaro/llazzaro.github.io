@@ -1,0 +1,121 @@
+/* Custom Hero Section for Book Feature */
+
+.profile {
+    padding: 40px 20px;
+}
+
+.profile_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile_inner img {
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto !important;
+    width: auto !important;
+    max-width: 280px;
+    max-height: 400px;
+}
+
+.profile_inner img:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+}
+
+.profile_inner h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px 0 5px 0;
+    line-height: 1.3;
+}
+
+.profile_inner > span {
+    font-size: 1.1rem;
+    text-align: center;
+    opacity: 0.85;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.profile .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.profile .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.profile .button:first-child {
+    background: linear-gradient(135deg, #0A7029 0%, #0d9e3c 100%);
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(10, 112, 41, 0.4);
+}
+
+.profile .button:first-child:hover {
+    background: linear-gradient(135deg, #0d9e3c 0%, #0A7029 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(10, 112, 41, 0.5);
+}
+
+.profile .button:not(:first-child) {
+    background: var(--tertiary);
+    color: var(--primary) !important;
+    border: 2px solid var(--border);
+}
+
+.profile .button:not(:first-child):hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+/* Social icons styling */
+.profile footer {
+    margin-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .profile_inner h1 {
+        font-size: 1.6rem;
+    }
+
+    .profile_inner > span {
+        font-size: 1rem;
+    }
+
+    .profile .button {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+        min-width: 160px;
+    }
+
+    .profile_inner img {
+        max-width: 220px;
+    }
+}
+
+/* Home info section below profile */
+.home-info {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+}
