@@ -1,0 +1,17 @@
+{{- /* Head custom content area - Analytics & Custom Scripts */ -}}
+
+{{- /* Plausible Analytics (privacy-friendly, no cookies, GDPR compliant) */ -}}
+{{- /* To enable: set params.analytics.plausible.domain in config.toml */ -}}
+{{- with .Site.Params.analytics.plausible }}
+{{- if .domain }}
+<script defer data-domain="{{ .domain }}" src="{{ .src | default "https://plausible.io/js/script.js" }}"></script>
+{{- end }}
+{{- end }}
+
+{{- /* GoatCounter Analytics (alternative privacy-friendly option) */ -}}
+{{- /* To enable: set params.analytics.goatcounter.code in config.toml */ -}}
+{{- with .Site.Params.analytics.goatcounter }}
+{{- if .code }}
+<script data-goatcounter="https://{{ .code }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+{{- end }}
+{{- end }}

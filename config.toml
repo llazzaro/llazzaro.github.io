@@ -83,6 +83,20 @@ theme = "PaperMod"
       name = "📬 Subscribe to Newsletter"
       url = "/newsletter/"
 
+  # Privacy-Friendly Analytics
+  # Choose ONE: Plausible (paid but excellent) or GoatCounter (free tier available)
+  
+  # Plausible Analytics - https://plausible.io
+  # Sign up at plausible.io, add your domain, then uncomment:
+  # [params.analytics.plausible]
+  #   domain = "lazzaro.com.ar"
+  #   src = "https://plausible.io/js/script.js"  # or self-hosted URL
+  
+  # GoatCounter - https://www.goatcounter.com (free for personal sites!)
+  # Sign up at goatcounter.com, create a site code, then uncomment:
+  # [params.analytics.goatcounter]
+  #   code = "lazzaro"  # your-site-code from goatcounter.com
+
   [params.utterances]
     enable = false
     repo = ""
