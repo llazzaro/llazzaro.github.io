@@ -1,30 +1,34 @@
 +++
 title = "About"
-description = "Leonardo Lazzaro - Software Engineer, Django Expert & Author"
+description = "Leonardo Lazzaro - Software Engineer"
 date = "2022-02-12"
-aliases = []
 author = "Leonardo Lazzaro"
 +++
 
-Hi! I'm **Leonardo Lazzaro**, a software engineer originally from Argentina, now based in **Eindhoven, Netherlands**.
+Hey! I'm **Leonardo Lazzaro**.
 
-## Author
-
-I'm the author of [**Building Web Applications with Django**](https://www.packtpub.com/product/building-web-applications-with-django/9781805125457), published by Packt. The book covers modern Django development practices for building scalable web applications.
+I'm a software engineer from Argentina, currently living in **Eindhoven, Netherlands**. I've been writing code professionally for over 15 years, mostly in Python and Django, though I've been exploring Go and Rust lately.
 
 ## What I Do
 
-I specialize in **Python** and **Django**, with a strong focus on building scalable, production-ready systems. I'm passionate about:
+I work at [Sendcloud](https://www.sendcloud.com/), where I help modernize systems and build scalable microservices. Before that, I worked on security products, real-time data pipelines, and even did some bioinformatics research during my university thesis.
 
-- **Serverless architecture** and high-scalability solutions
-- **Open source development** — learning and contributing back to the community
-- **Go** for performance-critical applications
-- **Rust** — currently expanding my toolkit with systems programming
+I'm passionate about:
+- **Clean code** and good software engineering practices
+- **Open source** — I love learning from the community and giving back
+- **Building things** that actually work in production
+
+## The Book
+
+I wrote [**Building Web Applications with Django**](https://amzn.to/3HkKKfB), published by Packt. It covers modern Django development — from the basics to deploying with Docker and Kubernetes. If you're learning Django, it might help you out.
+
+## Outside of Work
+
+When I'm not coding, you'll probably find me on my bike or behind a camera. Cycling and photography are my favorite ways to disconnect.
 
 ## Connect
 
-- **LinkedIn:** [linkedin.com/in/llazzaro](https://www.linkedin.com/in/llazzaro/)
+- **Email:** [lazzaroleonardo@gmail.com](mailto:lazzaroleonardo@gmail.com)
 - **GitHub:** [github.com/llazzaro](https://github.com/llazzaro)
-- **Twitter:** [twitter.com/llazzaro](https://twitter.com/llazzaro)
-- **Email:** [llazzaro@dc.uba.ar](mailto:llazzaro@dc.uba.ar)
-- **Website:** [lazzaro.com.ar](https://www.lazzaro.com.ar)
+- **LinkedIn:** [linkedin.com/in/llazzaro](https://linkedin.com/in/llazzaro)
+- **X:** [x.com/llazzaro](https://x.com/llazzaro)

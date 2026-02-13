@@ -26,14 +26,11 @@ theme = "PaperMod"
   # SEO: Enable production environment for robots indexing
   env = "production"
   
-  # SEO: Meta description for homepage and fallback
-  description = "Leonardo Lazzaro - Software engineer, Django expert, and author of 'Ultimate Django for Web App Development Using Python'. Learn Django, Python web development, and modern backend practices."
+  # Meta description
+  description = "Leonardo Lazzaro - Software engineer writing about Python, Django, and building things on the web."
   
-  # SEO: Default image for Open Graph and Twitter Cards
+  # Default image for Open Graph
   images = ["/images/django-book-cover.jpg"]
-  
-  # SEO: Site-wide keywords
-  keywords = ["Django", "Python", "web development", "software engineering", "Django tutorial", "Python web framework", "backend development", "Leonardo Lazzaro", "Django book"]
   
   dateformat = "2006-01-02"
   dateFormat = "2006-01-02"
@@ -79,7 +76,7 @@ theme = "PaperMod"
   
   [params.author]
     name = "Leonardo Lazzaro"
-    bio = "Software engineer and Django expert based in Japan"
+    bio = "Software engineer writing about Python, Django, and building things on the web"
     
   [[params.socialIcons]]
     name = "github"
@@ -93,23 +90,28 @@ theme = "PaperMod"
     name = "x"
     url = "https://x.com/llazzaro"
 
-  # Hero section featuring the book
+  # Hero section - personal intro (inspired by rdegges.com)
   [params.profileMode]
     enabled = true
-    title = "📚 Ultimate Django for Web App Development"
-    subtitle = "Master Django 4.2 with hands-on projects! Build production-ready web apps using Python, Django Ninja APIs, pytest, Docker & Kubernetes. Perfect for beginners — no prior Python experience required."
-    imageUrl = "/images/django-book-cover.jpg"
-    imageTitle = "Ultimate Django for Web App Development Using Python - Book Cover"
-    imageWidth = 280
-    imageHeight = 400
+    title = "Leonardo Lazzaro"
+    subtitle = "Hey! I'm a software engineer from Argentina, now living in the Netherlands. I write about Python, Django, and building things on the web. I also wrote a [book on Django](https://amzn.to/3HkKKfB) — check it out if you're learning."
+    # Add your avatar: save as static/images/avatar.jpg
+    # imageUrl = "/images/avatar.jpg"
+    # imageTitle = "Leonardo Lazzaro"
+    # imageWidth = 150
+    # imageHeight = 150
 
     [[params.profileMode.buttons]]
-      name = "📖 Get the Book on Amazon"
-      url = "https://amzn.to/3HkKKfB"
+      name = "📝 Posts"
+      url = "/posts/"
       
     [[params.profileMode.buttons]]
-      name = "👨‍💻 About the Author"
+      name = "👤 About"
       url = "/about/"
+      
+    [[params.profileMode.buttons]]
+      name = "📄 CV"
+      url = "/cv/"
 
   # Privacy-Friendly Analytics
   # Choose ONE: Plausible (paid but excellent) or GoatCounter (free tier available)
