@@ -54,7 +54,7 @@ Universidad de Buenos Aires, Facultad de Ciencias Exactas, Argentina
 **Senior Engineer** — Designed and implemented microservices to modernize the codebase from a monolithic application. Proposed and executed technical solutions to improve architecture and promote good software engineering practices such as BDD. Provided technical support for AWS Cloud Infrastructure using Terraform, Docker, and Kubernetes.
 
 ### Wildlife Studios — *Oct 2020 – Sep 2021*
-**Data Engineer** — Real-time data pipelines for 300M+ users. Golang, Ruby, Python.
+**Data Engineer** — Real-time data pipelines processing billions of events/month for 300M+ users. Golang, Ruby, Python.
 
 ### FaradaySec — *Mar 2017 – Oct 2020*
 **Principal Software Engineer (2019-2020):** Key role in growth and technical direction. Led migration from CouchDB to PostgreSQL. Promoted TDD, CI/CD, and automation practices.
