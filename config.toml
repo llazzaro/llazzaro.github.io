@@ -163,6 +163,12 @@ theme = "PaperMod"
     name = "About"
     url = "/about/"
     weight = 5
+    
+  [[menu.main]]
+    identifier = "cv"
+    name = "CV"
+    url = "/cv/"
+    weight = 6
 
 [taxonomies]
   category = "categories"
