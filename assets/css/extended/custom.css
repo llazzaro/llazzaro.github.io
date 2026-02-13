@@ -103,6 +103,10 @@
   #menu a {
     font-size: 0.9rem;
   }
+  
+  .hide-mobile {
+    display: none !important;
+  }
 }
 
 /* Main content */
