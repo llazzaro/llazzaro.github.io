@@ -26,6 +26,10 @@ I wrote [**Building Web Applications with Django**](https://amzn.to/3HkKKfB), pu
 
 When I'm not coding, you'll probably find me on my bike or behind a camera. Cycling and photography are my favorite ways to disconnect.
 
+## CV
+
+📄 **[Download my CV](/cv/)** — full work history and skills.
+
 ## Connect
 
 - **Email:** [lazzaroleonardo@gmail.com](mailto:lazzaroleonardo@gmail.com)
