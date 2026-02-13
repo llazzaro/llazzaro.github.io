@@ -4,7 +4,8 @@ date = "2026-01-01"
 description = "Breve descripción del viaje"
 draft = true
 tags = ["netherlands", "day-trip"]
-cover:
+
+[cover]
   image = "images/cover.jpg"
   alt = "Descripción de la foto"
 +++
@@ -15,9 +16,7 @@ cover:
 **Distancia:** 150 km  
 **Duración:** 4 horas  
 
-{{< openstreetmap mapName="tu-mapa" >}}
-
-O usa Google Maps:
+Para mapas, usa Google Maps:
 
 <iframe src="https://www.google.com/maps/embed?pb=YOUR_EMBED_URL" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 
