@@ -1,20 +1,16 @@
 %% Modern CV - Leonardo Lazzaro
 \documentclass[11pt,a4paper,sans]{moderncv}
 
-% ModernCV themes
-\moderncvstyle{classic}  % 'casual', 'classic', 'banking', 'oldstyle', 'fancy'
-\moderncvcolor{blue}     % 'blue', 'orange', 'green', 'red', 'purple', 'grey', 'black'
+\moderncvstyle{classic}   % clean style
+\moderncvcolor{blue}
 
-% Packages
 \usepackage[utf8]{inputenc}
-\usepackage[scale=0.85]{geometry}
-\usepackage{fontawesome5}
+\usepackage[scale=0.88]{geometry}
 
 % Personal data
 \name{Leonardo}{Lazzaro}
 \title{Senior Software Engineer}
-\address{Amsterdam Area}{Netherlands}{}
-\phone[mobile]{+31~6~38~00~82~53}
+\address{Almere}{Netherlands}{}
 \email{lazzaroleonardo@gmail.com}
 \homepage{lazzaro.com.ar}
 \social[linkedin]{llazzaro}
@@ -24,85 +20,39 @@
 
 \makecvtitle
 
-\section{About}
-Senior Software Engineer with 15+ years of experience building scalable backend systems. Author of "Building Web Applications with Django" (Packt). Passionate about clean code, good engineering practices, and open source.
-
 \section{Experience}
 
-\cventry{Aug 2023 -- Present}{Senior Engineer}{FareHarbor}{Amsterdam}{}{
-Senior Engineer working on backend systems for the leading booking and management platform for tours and activities worldwide.
-}
+\cventry{2023 -- Present}{Senior Engineer}{FareHarbor}{Amsterdam}{}{}
 
-\cventry{Sep 2021 -- Jul 2023}{Senior Engineer}{Sendcloud}{Eindhoven}{}{
-\begin{itemize}
-\item Designed and implemented microservices to modernize monolithic application
-\item Proposed and executed technical solutions to improve architecture
-\item Promoted BDD practices to enhance communication and quality
-\item AWS Cloud Infrastructure support (Terraform, Docker, Kubernetes)
-\item Onboarding and training of new teams
-\end{itemize}
-}
+\cventry{2021 -- 2023}{Senior Engineer}{Sendcloud}{Eindhoven}{}{
+Microservices architecture, BDD practices, AWS infrastructure (Terraform, Docker, K8s).}
 
-\cventry{Oct 2020 -- Sep 2021}{Backend Engineer}{Wildlife Studios}{}{}{
-\begin{itemize}
-\item Real-time service processing millions of events for business-critical models
-\item Technologies: Golang, Ruby, Python
-\item Product with 300+ million users
-\end{itemize}
-}
+\cventry{2020 -- 2021}{Backend Engineer}{Wildlife Studios}{}{}{
+Real-time data pipelines for 300M+ users. Golang, Ruby, Python.}
 
-\cventry{Mar 2019 -- Oct 2020}{Principal Software Engineer}{FaradaySec}{}{}{
-\begin{itemize}
-\item Key role in growth and technical direction
-\item Led migration from CouchDB to PostgreSQL
-\item Promoted TDD, CI/CD, and automation practices
-\end{itemize}
-}
+\cventry{2017 -- 2020}{Principal / Senior Engineer}{FaradaySec}{}{}{
+Technical leadership, CouchDB to PostgreSQL migration, TDD/CI practices.}
 
-\cventry{Mar 2017 -- Mar 2019}{Senior Software Developer}{FaradaySec}{}{}{
-Vulnerability management product development and project organization.
-}
+\cventry{2016 -- 2017}{Researcher}{IBIOBA (Max Planck)}{Buenos Aires}{}{
+Data mining for drug discovery. Licenciatura thesis.}
 
-\cventry{Mar 2016 -- Mar 2017}{Researcher}{IBIOBA (Max Planck Partner)}{Buenos Aires}{}{
-Licenciatura thesis: Data mining for drug discovery. Developed algorithm for ligand-protein simulation evaluation.
-}
-
-\cventry{Jan 2013 -- Mar 2016}{Technical Leader / Developer}{Onapsis}{}{}{
-\begin{itemize}
-\item JS/Python developer on vulnerability scanner
-\item Built Django + SalesForce API integration
-\item Led team of 4 developers
-\end{itemize}
-}
-
-\cventry{Jan 2012 -- Jan 2013}{Software Developer}{SCV}{}{}{
-Java/Python developer for advanced energy services.
-}
-
-\cventry{Dec 2010 -- Jan 2012}{Software Developer}{VerkkoStadi}{Dominican Republic}{}{
-Cloud OCR processing ~5 million images/day (Python, MySQL).
-}
+\cventry{2013 -- 2016}{Tech Lead / Developer}{Onapsis}{}{}{
+Vulnerability scanner development. Django, SalesForce API. Team of 4.}
 
 \section{Book}
-\cvitem{2024}{\href{https://amzn.to/3HkKKfB}{\textbf{Building Web Applications with Django}} -- Packt Publishing\newline
-Modern Django development: Django 4.2, Django Ninja APIs, pytest, Docker, Kubernetes.}
+\cvitem{2024}{\href{https://amzn.to/3HkKKfB}{\textbf{Building Web Applications with Django}} -- Packt Publishing}
 
 \section{Education}
-\cventry{}{Licenciatura en Ciencias de la Computación}{Universidad de Buenos Aires}{Argentina}{}{}
+\cventry{}{Licenciatura en Ciencias de la Computación}{Universidad de Buenos Aires}{}{}{}
 
-\section{Technical Skills}
+\section{Skills}
 \cvitem{Languages}{Python, Go}
-\cvitem{Frameworks}{FastAPI, Flask, Django, Django Ninja}
-\cvitem{Databases}{PostgreSQL, Redis}
-\cvitem{Infrastructure}{Docker, Kubernetes, AWS, Terraform, Nix}
-\cvitem{Messaging}{RabbitMQ, Kafka}
-\cvitem{Testing}{Pytest, BDD}
+\cvitem{Stack}{Django, FastAPI, PostgreSQL, Redis, Docker, Kubernetes, AWS, Terraform}
 
 \section{Languages}
-\cvitemwithcomment{Spanish}{Native}{}
-\cvitemwithcomment{English}{Fluent}{}
+\cvdoubleitem{Spanish}{Native}{English}{Fluent}
 
 \section{Interests}
-\cvitem{}{Cycling, Motorcycling, Photography}
+\cvitem{}{Cycling \textbullet{} Motorcycling \textbullet{} Photography}
 
 \end{document}

@@ -14,7 +14,7 @@ author = "Leonardo Lazzaro"
 - **Email:** [lazzaroleonardo@gmail.com](mailto:lazzaroleonardo@gmail.com)
 - **GitHub:** [github.com/llazzaro](https://github.com/llazzaro)
 - **LinkedIn:** [linkedin.com/in/llazzaro](https://linkedin.com/in/llazzaro)
-- **Location:** Eindhoven, Netherlands
+- **Location:** Almere, Netherlands
 
 ---
 
