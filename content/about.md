@@ -24,7 +24,7 @@ I wrote [**Building Web Applications with Django**](https://amzn.to/3HkKKfB), pu
 
 ## Outside of Work
 
-When I'm not coding, you'll probably find me on my bike or behind a camera. Cycling and photography are my favorite ways to disconnect.
+When I'm not coding, you'll probably find me on my bike (pedal or motor) or behind a camera. Cycling, motorcycling, and photography are my favorite ways to disconnect.
 
 ## CV
 

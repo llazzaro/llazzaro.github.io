@@ -89,4 +89,4 @@ Spanish (native), English (fluent)
 
 ## 🚴 Hobbies
 
-Cycling, Photography
+Cycling, Motorcycling, Photography
