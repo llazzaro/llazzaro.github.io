@@ -21,10 +21,6 @@ I specialize in **Python** and **Django**, with a strong focus on building scala
 - **Go** for performance-critical applications
 - **Rust** — currently expanding my toolkit with systems programming
 
-## Stay in Touch
-
-📬 **[Subscribe to my newsletter](/newsletter/)** for occasional updates on Django, Python, and web development.
-
 ## Connect
 
 - **LinkedIn:** [linkedin.com/in/llazzaro](https://www.linkedin.com/in/llazzaro/)

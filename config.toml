@@ -110,10 +110,6 @@ theme = "PaperMod"
     [[params.profileMode.buttons]]
       name = "👨‍💻 About the Author"
       url = "/about/"
-      
-    [[params.profileMode.buttons]]
-      name = "📬 Subscribe to Newsletter"
-      url = "/newsletter/"
 
   # Privacy-Friendly Analytics
   # Choose ONE: Plausible (paid but excellent) or GoatCounter (free tier available)
@@ -167,12 +163,6 @@ theme = "PaperMod"
     name = "About"
     url = "/about/"
     weight = 5
-    
-  [[menu.main]]
-    identifier = "newsletter"
-    name = "Newsletter"
-    url = "/newsletter/"
-    weight = 6
 
 [taxonomies]
   category = "categories"
