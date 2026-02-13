@@ -20,7 +20,7 @@ I'm passionate about:
 
 ## The Book
 
-I wrote [**Building Web Applications with Django**](https://amzn.to/3HkKKfB), published by Packt. It covers modern Django development — from the basics to deploying with Docker and Kubernetes. If you're learning Django, it might help you out.
+I wrote [**Building Web Applications with Django**](https://amzn.to/3HkKKfB), published by Orange Education. It covers modern Django development — from the basics to deploying with Docker and Kubernetes. If you're learning Django, it might help you out.
 
 ## Outside of Work
 

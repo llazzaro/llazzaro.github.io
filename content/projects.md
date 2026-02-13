@@ -20,9 +20,9 @@ My comprehensive guide to mastering Django 4.2 with hands-on projects. Build pro
 
 ### Building Web Applications with Django
 
-Published by **Packt**, this book covers modern Django development practices for building scalable web applications.
+Published by **Orange Education**, this book covers modern Django development practices for building scalable web applications.
 
-👉 [**View on Packt**](https://www.packtpub.com/product/building-web-applications-with-django/9781805125457)
+👉 [**View on Amazon**](https://amzn.to/3HkKKfB)
 
 ---
 
