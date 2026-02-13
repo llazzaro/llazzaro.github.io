@@ -4,80 +4,56 @@ defaultContentLanguage = "en"
 title = "Leonardo Lazzaro"
 theme = "PaperMod"
 
-# Enable production mode for proper indexing
 [build]
   environment = "production"
 
-# Pagination
 [pagination]
-  pagerSize = 10
+  pagerSize = 100
 
-# Markup: allow raw HTML in markdown
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
 
-# Parameters
 [params]
-  # Social accounts (used for Twitter Cards)
-  [params.social]
-    twitter = "llazzaro"
-  # SEO: Enable production environment for robots indexing
   env = "production"
-  
-  # Meta description
   description = "Leonardo Lazzaro - Software engineer writing about Python, Django, and building things on the web."
-  
-  # Default image for Open Graph
   images = ["/images/django-book-cover.jpg"]
   
-  dateformat = "2006-01-02"
-  dateFormat = "2006-01-02"
+  dateformat = "02 Jan 2006"
+  dateFormat = "02 Jan 2006"
   defaultTheme = "auto"
-  disableThemeToggle = false
-  displayFullLangName = false
-  disableSpecial1stPost = false
-  disableScrollToTop = false
+  disableThemeToggle = true
+  disableSpecial1stPost = true
+  disableScrollToTop = true
   hideMeta = false
-  hideSummary = false
+  hideSummary = true
   showtoc = false
-  tocopen = false
   showBreadCrumbs = false
-  share = false
-  ShowReadingTime = true
-  ShowWordCount = true
+  ShowReadingTime = false
+  ShowWordCount = false
   ShowPostNavLinks = true
   ShowCodeCopyButtons = true
-  ShowRssButtonInSectionTermList = true
-  ShowAllPagesInArchive = false
-  ShowPageNums = true
-  ShowToc = true
-  TocFuzzy = true
-  TocLevels = 3
-  UseHugoToc = true
+  ShowRssButtonInSectionTermList = false
+  ShowAllPagesInArchive = true
   comments = false
-  customCSS = []
-  enableFullRSS = true
-  enableHanEmph = true
-  enableMathjax = true
-  favicon = "/favicon.ico"
-  darkmode = false
   hideFooter = false
   
-  # SEO: Schema.org structured data settings
   [params.schema]
     publisherType = "Person"
     sameAs = [
       "https://github.com/llazzaro",
-      "https://linkedin.com/in/llazzaro",
-      "https://x.com/llazzaro"
+      "https://linkedin.com/in/llazzaro"
     ]
   
   [params.author]
     name = "Leonardo Lazzaro"
-    bio = "Software engineer writing about Python, Django, and building things on the web"
     
+  # Homepage intro (rdegges style)
+  [params.homeInfoParams]
+    Title = "Leonardo Lazzaro"
+    Content = "Software engineer writing about Python, Django, and building things on the web. Author of [Building Web Applications with Django](https://amzn.to/3HkKKfB)."
+
   [[params.socialIcons]]
     name = "github"
     url = "https://github.com/llazzaro"
@@ -87,68 +63,35 @@ theme = "PaperMod"
     url = "https://linkedin.com/in/llazzaro"
     
   [[params.socialIcons]]
-    name = "x"
-    url = "https://x.com/llazzaro"
+    name = "email"
+    url = "mailto:lazzaroleonardo@gmail.com"
 
-  # Simple header: name + tagline
-  [params.homeInfoParams]
-    Title = "Leonardo Lazzaro"
-    Content = "Software engineer writing about Python, Django, and building things on the web."
-
-  # Privacy-Friendly Analytics
-  # Choose ONE: Plausible (paid but excellent) or GoatCounter (free tier available)
-  
-  # Plausible Analytics - https://plausible.io
-  # Sign up at plausible.io, add your domain, then uncomment:
-  # [params.analytics.plausible]
-  #   domain = "lazzaro.com.ar"
-  #   src = "https://plausible.io/js/script.js"  # or self-hosted URL
-  
-  # GoatCounter - https://www.goatcounter.com (free for personal sites!)
-  # Sign up at goatcounter.com, create a site code, then uncomment:
-  # [params.analytics.goatcounter]
-  #   code = "lazzaro"  # your-site-code from goatcounter.com
-
-  [params.utterances]
-    enable = false
-    repo = ""
-    issue_term = "pathname"
-    label = "Comment"
-    theme = "github-light"
-
-# Menu
+# Minimal menu (rdegges style)
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
+    name = "HOME"
     url = "/"
     weight = 1
     
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
+    name = "GITHUB"
+    url = "https://github.com/llazzaro"
     weight = 2
     
   [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
+    name = "LINKEDIN"
+    url = "https://linkedin.com/in/llazzaro"
     weight = 3
-    
+
   [[menu.main]]
-    identifier = "projects"
-    name = "Projects"
-    url = "/projects/"
+    name = "ABOUT"
+    url = "/about/"
     weight = 4
     
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    name = "EMAIL"
+    url = "mailto:lazzaroleonardo@gmail.com"
     weight = 5
 
 [taxonomies]
-  category = "categories"
   tag = "tags"
-  series = "series"

@@ -1,351 +1,104 @@
-/* Modern Theme Customization for PaperMod */
+/* rdegges.com inspired minimal style */
 
-/* ===== Color Variables ===== */
-:root {
-    --accent: #2563eb; /* Modern blue */
-    --accent-dark: #1d4ed8;
-    --accent-light: #3b82f6;
-    --accent-subtle: rgba(37, 99, 235, 0.1);
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
-    --surface-elevated: #ffffff;
-    --border-subtle: #e2e8f0;
+/* Header - big name + tagline */
+.home-info .entry-header h1,
+header .logo a {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
 }
 
-.dark {
-    --accent: #3b82f6;
-    --accent-dark: #2563eb;
-    --accent-light: #60a5fa;
-    --accent-subtle: rgba(59, 130, 246, 0.15);
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --surface-elevated: #1e293b;
-    --border-subtle: #334155;
+/* Simple tagline */
+.home-info .entry-content {
+  font-size: 1.1rem;
+  color: var(--secondary);
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-/* ===== Typography ===== */
-body {
-    font-feature-settings: "kern" 1, "liga" 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+/* Horizontal separator after header */
+.home-info {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.02em;
-    font-weight: 700;
-}
-
-.post-title {
-    font-size: 2.25rem;
-    line-height: 1.2;
-}
-
-/* ===== Header & Navigation ===== */
+/* Navigation - inline comma-separated style */
 .nav {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
 }
 
-#menu a {
-    font-weight: 500;
-    transition: color 0.2s ease, opacity 0.2s ease;
+.nav a {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
 }
 
-#menu a:hover {
-    color: var(--accent);
+.nav li::after {
+  content: ",";
+  margin-right: 0.5rem;
 }
 
-#menu a.active {
-    color: var(--accent);
-    font-weight: 600;
+.nav li:last-child::after {
+  content: "";
 }
 
-/* Logo/Title hover */
-.logo a:hover {
-    color: var(--accent);
-}
-
-/* ===== Links ===== */
-.post-content a {
-    color: var(--accent);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-    transition: all 0.2s ease;
-}
-
-.post-content a:hover {
-    color: var(--accent-dark);
-    text-decoration-thickness: 2px;
-}
-
-/* ===== Post Cards (Entry List) ===== */
+/* Post list - clean with dates */
 .post-entry {
-    border-radius: 12px;
-    border: 1px solid var(--border-subtle);
-    transition: all 0.3s ease;
-    margin-bottom: 20px;
-    padding: 20px 24px;
-    background: var(--entry);
+  border: none;
+  padding: 0.5rem 0;
 }
 
-.post-entry:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-    border-color: var(--accent);
+.post-entry .entry-header h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
-.dark .post-entry:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+.post-entry .entry-header h2 a {
+  text-decoration: none;
 }
 
-.entry-header h2 {
-    font-size: 1.35rem;
-    margin-bottom: 8px;
-    transition: color 0.2s ease;
+.post-entry .entry-header h2 a:hover {
+  text-decoration: underline;
 }
 
-.post-entry:hover .entry-header h2 {
-    color: var(--accent);
-}
-
-.entry-content {
-    color: var(--text-secondary);
-    line-height: 1.7;
-}
-
-/* ===== Post Meta ===== */
 .post-meta {
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
+  font-size: 0.85rem;
+  color: var(--secondary);
 }
 
-/* ===== Tags ===== */
-.post-tags a {
-    display: inline-flex;
-    align-items: center;
-    padding: 4px 12px;
-    background: var(--accent-subtle);
-    color: var(--accent);
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-    text-decoration: none;
+/* Hide post content/summary on list */
+.post-entry .entry-content {
+  display: none;
 }
 
-.post-tags a:hover {
-    background: var(--accent);
-    color: white;
+/* Footer - minimal */
+.footer {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 2rem;
 }
 
-/* ===== Code Blocks ===== */
-.post-content pre {
-    border-radius: 10px;
-    border: 1px solid var(--border-subtle);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+/* Remove cover images from list */
+.post-entry .entry-cover {
+  display: none;
 }
 
-.dark .post-content pre {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+/* Clean overall spacing */
+.main {
+  max-width: 700px;
 }
 
-.post-content code:not([class*="language-"]) {
-    background: var(--accent-subtle);
-    color: var(--accent-dark);
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 0.9em;
+/* Profile mode adjustments if used */
+.profile {
+  text-align: left;
 }
 
-.dark .post-content code:not([class*="language-"]) {
-    color: var(--accent-light);
-}
-
-/* ===== Buttons ===== */
-.pagination a,
-.pagination span {
-    border-radius: 8px;
-    transition: all 0.2s ease;
-}
-
-.pagination a:hover {
-    background: var(--accent);
-    color: white;
-}
-
-/* ===== Table of Contents ===== */
-.toc {
-    border-radius: 10px;
-    border: 1px solid var(--border-subtle);
-    background: var(--code-bg);
-    padding: 16px 20px;
-}
-
-.toc-title {
-    font-weight: 600;
-    margin-bottom: 12px;
-}
-
-#TableOfContents a {
-    color: var(--text-secondary);
-    transition: color 0.2s ease;
-}
-
-#TableOfContents a:hover {
-    color: var(--accent);
-}
-
-/* ===== Footer ===== */
-footer {
-    border-top: 1px solid var(--border-subtle);
-    padding-top: 30px;
-    margin-top: 60px;
-}
-
-/* ===== Social Icons ===== */
-.social-icons a {
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.social-icons a:hover {
-    transform: translateY(-2px);
-    color: var(--accent);
-}
-
-/* ===== Scroll to Top Button ===== */
-#top-link {
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--accent);
-    color: white;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
-    transition: all 0.3s ease;
-}
-
-#top-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
-}
-
-/* ===== Theme Toggle ===== */
-#theme-toggle {
-    border-radius: 8px;
-    transition: all 0.2s ease;
-}
-
-#theme-toggle:hover {
-    background: var(--accent-subtle);
-    color: var(--accent);
-}
-
-/* ===== Reading Progress (subtle top bar) ===== */
-.progress-bar {
-    background: linear-gradient(90deg, var(--accent), var(--accent-light));
-}
-
-/* ===== Blockquotes ===== */
-.post-content blockquote {
-    border-left: 4px solid var(--accent);
-    background: var(--accent-subtle);
-    padding: 16px 20px;
-    border-radius: 0 8px 8px 0;
-    margin: 24px 0;
-}
-
-.post-content blockquote p {
-    margin: 0;
-}
-
-/* ===== Images ===== */
-.post-content img {
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.dark .post-content img {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* ===== Selection ===== */
-::selection {
-    background: var(--accent);
-    color: white;
-}
-
-/* ===== Focus States (Accessibility) ===== */
-a:focus-visible,
-button:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-}
-
-/* ===== Smooth Animations ===== */
-* {
-    scroll-behavior: smooth;
-}
-
-/* Subtle entrance animation for posts */
-.post-entry {
-    animation: fadeInUp 0.4s ease forwards;
-    opacity: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Stagger animation for post list */
-.post-entry:nth-child(1) { animation-delay: 0.05s; }
-.post-entry:nth-child(2) { animation-delay: 0.1s; }
-.post-entry:nth-child(3) { animation-delay: 0.15s; }
-.post-entry:nth-child(4) { animation-delay: 0.2s; }
-.post-entry:nth-child(5) { animation-delay: 0.25s; }
-
-/* ===== Mobile Optimizations ===== */
-@media (max-width: 768px) {
-    .post-title {
-        font-size: 1.75rem;
-    }
-    
-    .post-entry {
-        padding: 16px 18px;
-        border-radius: 10px;
-    }
-    
-    .entry-header h2 {
-        font-size: 1.15rem;
-    }
-    
-    #top-link {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-/* ===== Print Styles ===== */
-@media print {
-    .post-entry:hover {
-        transform: none;
-        box-shadow: none;
-    }
-    
-    * {
-        animation: none !important;
-    }
+.profile .profile_inner h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
