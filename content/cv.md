@@ -47,8 +47,11 @@ Universidad de Buenos Aires, Facultad de Ciencias Exactas, Argentina
 
 ## 💼 Experience
 
-### Sendcloud — *Sep 2021 – Present*
-Designed and implemented microservices to modernize the codebase from a monolithic application. Proposed and executed technical solutions to improve architecture and promote good software engineering practices such as BDD. Provided technical support for AWS Cloud Infrastructure using Terraform, Docker, and Kubernetes.
+### FareHarbor — *Aug 2023 – Present*
+**Senior Engineer** — Working on backend systems for the leading booking and management platform for tours and activities. Based in Amsterdam.
+
+### Sendcloud — *Sep 2021 – Jul 2023*
+**Senior Engineer** — Designed and implemented microservices to modernize the codebase from a monolithic application. Proposed and executed technical solutions to improve architecture and promote good software engineering practices such as BDD. Provided technical support for AWS Cloud Infrastructure using Terraform, Docker, and Kubernetes.
 
 ### Wildlife Studios — *Oct 2020 – Sep 2021*
 Backend engineer on a real-time service processing millions of events to support business-critical models, utilizing Golang, Ruby, and Python. Contributed to a product with over 300 million users.
