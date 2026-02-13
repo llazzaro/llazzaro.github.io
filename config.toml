@@ -63,7 +63,7 @@ theme = "PaperMod"
   enableMathjax = true
   favicon = "/favicon.ico"
   darkmode = false
-  hideFooter = true
+  hideFooter = false
   
   # SEO: Schema.org structured data settings
   [params.schema]
