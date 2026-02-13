@@ -20,7 +20,7 @@ author = "Leonardo Lazzaro"
 
 ## 📚 Book
 
-**[Building Web Applications with Django](https://www.packtpub.com/product/building-web-applications-with-django/9781805125457)**  
+**[Building Web Applications with Django](https://amzn.to/3HkKKfB)**  
 *Packt Publishing, 2024*
 
 Comprehensive guide to modern Django development covering Django 4.2, Django Ninja APIs, pytest, Docker, and Kubernetes deployment.
