@@ -61,10 +61,6 @@ theme = "PaperMod"
   [[params.socialIcons]]
     name = "linkedin"
     url = "https://linkedin.com/in/llazzaro"
-    
-  [[params.socialIcons]]
-    name = "email"
-    url = "mailto:lazzaroleonardo@gmail.com"
 
 # Clean menu (internal pages only, social icons separate)
 [menu]
