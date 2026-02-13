@@ -1,95 +1,121 @@
-/* rdegges.com inspired minimal style */
+/* UX-optimized minimal style */
 
-/* Header layout */
+/* Header */
 .header {
   border-bottom: 1px solid var(--border);
-  margin-bottom: 2rem;
 }
 
 .header .nav {
-  display: block !important;
-  max-width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 750px;
   margin: 0 auto;
   padding: 1rem;
+  gap: 1rem;
 }
 
-/* Logo - big name */
+/* Logo */
 .header .logo {
-  display: block !important;
-  margin: 0 0 0.8rem 0 !important;
+  margin: 0;
 }
 
 .header .logo a {
-  font-size: 1.5rem !important;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
   text-decoration: none;
+  color: var(--primary);
 }
 
 @media (min-width: 768px) {
   .header .logo a {
-    font-size: 2rem !important;
+    font-size: 1.5rem;
   }
 }
 
-/* Menu - inline with commas */
-#menu.menu-inline,
-ul#menu {
-  display: flex !important;
-  flex-wrap: wrap !important;
-  flex-direction: row !important;
-  list-style: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  gap: 0 !important;
+/* Nav right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
-#menu.menu-inline li,
-ul#menu li {
-  display: inline !important;
-  margin: 0 !important;
-  padding: 0 !important;
+/* Menu links */
+#menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1.2rem;
 }
 
-#menu.menu-inline li:not(:last-child)::after,
-ul#menu li:not(:last-child)::after {
-  content: "," !important;
-  margin-right: 0.5rem;
-  color: var(--secondary);
+#menu li {
+  margin: 0;
 }
 
-#menu.menu-inline a,
-ul#menu a {
-  text-transform: uppercase !important;
-  font-size: 0.85rem !important;
-  letter-spacing: 0.03em;
+#menu a {
+  font-size: 0.95rem;
   text-decoration: none;
   color: var(--secondary);
-  display: inline !important;
+  transition: color 0.2s;
 }
 
-#menu.menu-inline a:hover,
-ul#menu a:hover {
+#menu a:hover {
   color: var(--primary);
 }
 
-/* Hide logo-switches (theme toggle, lang switch) */
-.logo-switches {
-  display: none !important;
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.social-icons a {
+  color: var(--secondary);
+  transition: color 0.2s;
+  display: flex;
+}
+
+.social-icons a:hover {
+  color: var(--primary);
+}
+
+.social-icons svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 500px) {
+  .header .nav {
+    flex-wrap: wrap;
+  }
+  
+  .nav-right {
+    gap: 1rem;
+  }
+  
+  #menu {
+    gap: 0.8rem;
+  }
+  
+  #menu a {
+    font-size: 0.9rem;
+  }
 }
 
 /* Main content */
 .main {
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 2rem 1rem;
 }
 
-/* Post list - clean with dates */
+/* Post list */
 .post-entry {
   border: none !important;
-  padding: 0.4rem 0 !important;
+  padding: 0.5rem 0 !important;
   margin: 0 !important;
 }
 
@@ -97,11 +123,12 @@ ul#menu a:hover {
   font-size: 1rem !important;
   font-weight: 400 !important;
   margin: 0 !important;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .post-entry .entry-header h2 a {
   text-decoration: none;
+  color: var(--primary);
 }
 
 .post-entry .entry-header h2 a:hover {
@@ -109,42 +136,42 @@ ul#menu a:hover {
 }
 
 .post-meta {
-  font-size: 0.8rem !important;
+  font-size: 0.85rem !important;
   color: var(--secondary);
-  margin-bottom: 0.2rem;
 }
 
-/* Hide post content/summary and covers */
+/* Hide extras */
 .post-entry .entry-content,
 .post-entry .entry-cover,
 .post-entry .entry-footer {
   display: none !important;
 }
 
-/* Footer - minimal */
+/* Footer */
 .footer {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 1rem;
+  max-width: 750px;
+  margin: 3rem auto 0;
+  padding: 1.5rem 1rem;
   border-top: 1px solid var(--border);
-  margin-top: 3rem;
   font-size: 0.85rem;
+  color: var(--secondary);
 }
 
-/* First entry / home info */
+/* Home/first entry */
 .first-entry {
   border: none !important;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--border) !important;
-}
-
-.first-entry .entry-header h1 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
 }
 
 /* Article pages */
 .post-single .post-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.post-single .post-content {
+  font-size: 1.05rem;
+  line-height: 1.7;
 }

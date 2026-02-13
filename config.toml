@@ -66,32 +66,17 @@ theme = "PaperMod"
     name = "email"
     url = "mailto:lazzaroleonardo@gmail.com"
 
-# Minimal menu (rdegges style)
+# Clean menu (internal pages only, social icons separate)
 [menu]
   [[menu.main]]
-    name = "HOME"
-    url = "/"
+    name = "Posts"
+    url = "/posts/"
     weight = 1
-    
-  [[menu.main]]
-    name = "GITHUB"
-    url = "https://github.com/llazzaro"
-    weight = 2
-    
-  [[menu.main]]
-    name = "LINKEDIN"
-    url = "https://linkedin.com/in/llazzaro"
-    weight = 3
 
   [[menu.main]]
-    name = "ABOUT"
+    name = "About"
     url = "/about/"
-    weight = 4
-    
-  [[menu.main]]
-    name = "EMAIL"
-    url = "mailto:lazzaroleonardo@gmail.com"
-    weight = 5
+    weight = 2
 
 [taxonomies]
   tag = "tags"
