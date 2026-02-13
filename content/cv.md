@@ -36,7 +36,7 @@ Universidad de Buenos Aires, Facultad de Ciencias Exactas, Argentina
 
 ## 💻 Technical Skills
 
-**Languages:** Python, Go, Rust  
+**Languages:** Python, Go  
 **Frameworks:** FastAPI, Flask, Django, Django Ninja  
 **Databases:** PostgreSQL, Redis  
 **Infrastructure:** Docker, Kubernetes, AWS, Terraform, Nix  

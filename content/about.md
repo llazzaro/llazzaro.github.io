@@ -7,7 +7,7 @@ author = "Leonardo Lazzaro"
 
 Hey! I'm **Leonardo Lazzaro**.
 
-I'm a software engineer from Argentina, currently living in **Eindhoven, Netherlands**. I've been writing code professionally for over 15 years, mostly in Python and Django, though I've been exploring Go and Rust lately.
+I'm a software engineer from Argentina, currently living in **Eindhoven, Netherlands**. I've been writing code professionally for over 15 years, mostly in Python and Django, though I've been exploring Go lately.
 
 ## What I Do
 
