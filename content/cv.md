@@ -47,7 +47,7 @@ Universidad de Buenos Aires, Facultad de Ciencias Exactas, Argentina
 
 ## 💼 Experience
 
-### FareHarbor — *Aug 2023 – Present*
+### FareHarbor (Booking Holdings) — *Aug 2023 – Present*
 **Senior Engineer** — Working on backend systems for the leading booking and management platform for tours and activities. Based in Amsterdam.
 
 ### Sendcloud — *Sep 2021 – Jul 2023*
