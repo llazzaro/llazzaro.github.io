@@ -90,23 +90,10 @@ theme = "PaperMod"
     name = "x"
     url = "https://x.com/llazzaro"
 
-  # Hero section featuring the book
-  [params.profileMode]
-    enabled = true
-    title = "📚 Building Web Applications with Django"
-    subtitle = "Master Django 4.2 with hands-on projects! Build production-ready web apps using Python, Django Ninja APIs, pytest, Docker & Kubernetes. Perfect for beginners — no prior Python experience required."
-    imageUrl = "/images/django-book-cover.jpg"
-    imageTitle = "Building Web Applications with Django - Book Cover"
-    imageWidth = 280
-    imageHeight = 400
-
-    [[params.profileMode.buttons]]
-      name = "📖 Get the Book on Amazon"
-      url = "https://amzn.to/3HkKKfB"
-      
-    [[params.profileMode.buttons]]
-      name = "👨‍💻 About the Author"
-      url = "/about/"
+  # Simple header: name + tagline
+  [params.homeInfoParams]
+    Title = "Leonardo Lazzaro"
+    Content = "Software engineer writing about Python, Django, and building things on the web."
 
   # Privacy-Friendly Analytics
   # Choose ONE: Plausible (paid but excellent) or GoatCounter (free tier available)

@@ -1,5 +1,43 @@
 {{- /* Head custom content area - Analytics & Custom Scripts */ -}}
 
+{{- /* Inline navigation styles */ -}}
+<style>
+    /* Hide default menu, use inline nav */
+    #menu { display: none !important; }
+    
+    .inline-nav {
+        display: inline;
+        font-size: 0.95rem;
+        margin-left: 1rem;
+    }
+    
+    .inline-nav a {
+        color: var(--secondary);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    
+    .inline-nav a:hover,
+    .inline-nav a.active {
+        color: var(--primary);
+    }
+    
+    .header .nav {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    @media (max-width: 600px) {
+        .inline-nav {
+            display: block;
+            margin-left: 0;
+            margin-top: 0.5rem;
+        }
+    }
+</style>
+
 {{- /* Plausible Analytics (privacy-friendly, no cookies, GDPR compliant) */ -}}
 {{- /* To enable: set params.analytics.plausible.domain in config.toml */ -}}
 {{- with .Site.Params.analytics.plausible }}
