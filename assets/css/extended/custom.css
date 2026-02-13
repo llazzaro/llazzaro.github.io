@@ -1,61 +1,68 @@
 /* rdegges.com inspired minimal style */
 
-/* Header - big name + tagline */
-.home-info .entry-header h1,
+/* Header - big name */
 header .logo a {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   font-weight: 700;
 }
 
-/* Simple tagline */
-.home-info .entry-content {
-  font-size: 1.1rem;
-  color: var(--secondary);
-  font-style: italic;
-  margin-bottom: 1rem;
+@media (min-width: 768px) {
+  header .logo a {
+    font-size: 2.2rem;
+  }
 }
 
-/* Horizontal separator after header */
-.home-info {
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-/* Navigation - inline comma-separated style */
-.nav {
-  display: flex;
+/* Fix mobile navigation - inline with commas */
+#menu {
+  display: flex !important;
   flex-wrap: wrap;
+  flex-direction: row !important;
   gap: 0;
+  align-items: center;
 }
 
-.nav a {
+#menu li {
+  display: inline;
+  line-height: 1.5;
+}
+
+#menu li + li::before {
+  content: ", ";
+  color: var(--secondary);
+}
+
+#menu a {
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+  letter-spacing: 0.03em;
 }
 
-.nav li::after {
-  content: ",";
-  margin-right: 0.5rem;
+/* Hide hamburger menu on mobile - show inline nav */
+.menu-trigger,
+#menu-trigger {
+  display: none !important;
 }
 
-.nav li:last-child::after {
-  content: "";
+nav#menu {
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  background: transparent !important;
 }
 
 /* Post list - clean with dates */
 .post-entry {
   border: none;
   padding: 0.5rem 0;
+  margin: 0;
 }
 
 .post-entry .entry-header h2 {
   font-size: 1rem;
-  text-transform: uppercase;
   font-weight: 400;
+  margin: 0;
 }
 
 .post-entry .entry-header h2 a {
@@ -71,8 +78,9 @@ header .logo a {
   color: var(--secondary);
 }
 
-/* Hide post content/summary on list */
-.post-entry .entry-content {
+/* Hide post content/summary and covers */
+.post-entry .entry-content,
+.post-entry .entry-cover {
   display: none;
 }
 
@@ -80,12 +88,7 @@ header .logo a {
 .footer {
   border-top: 1px solid var(--border);
   padding-top: 1rem;
-  margin-top: 2rem;
-}
-
-/* Remove cover images from list */
-.post-entry .entry-cover {
-  display: none;
+  margin-top: 3rem;
 }
 
 /* Clean overall spacing */
@@ -93,12 +96,25 @@ header .logo a {
   max-width: 700px;
 }
 
-/* Profile mode adjustments if used */
-.profile {
-  text-align: left;
+/* Home info section */
+.home-info {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
 }
 
-.profile .profile_inner h1 {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+/* Latest posts heading */
+.home-info + .post-entry,
+h2:has(+ ul) {
+  margin-top: 1.5rem;
+}
+
+/* Archive list style */
+.archive-entry {
+  padding: 0.3rem 0;
+}
+
+.archive-entry .entry-title {
+  font-size: 1rem;
+  font-weight: 400;
 }
