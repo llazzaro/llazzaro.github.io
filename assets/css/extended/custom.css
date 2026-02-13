@@ -1,61 +1,73 @@
 /* rdegges.com inspired minimal style */
 
-/* Header - big name */
-header .logo a {
-  font-size: 1.8rem;
+/* Header layout */
+.header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.nav {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Logo - big name */
+.logo {
+  margin-bottom: 1rem;
+}
+
+.logo a {
+  font-size: 1.6rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   font-weight: 700;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
-  header .logo a {
-    font-size: 2.2rem;
+  .logo a {
+    font-size: 2rem;
   }
 }
 
-/* Fix mobile navigation - inline with commas */
-#menu {
-  display: flex !important;
+/* Menu links - inline with commas */
+.menu-links {
+  display: flex;
   flex-wrap: wrap;
-  flex-direction: row !important;
   gap: 0;
-  align-items: center;
 }
 
-#menu li {
-  display: inline;
-  line-height: 1.5;
-}
-
-#menu li + li::before {
-  content: ", ";
-  color: var(--secondary);
-}
-
-#menu a {
+.menu-links a {
   text-transform: uppercase;
   font-size: 0.85rem;
   letter-spacing: 0.03em;
+  text-decoration: none;
+  color: var(--secondary);
 }
 
-/* Hide hamburger menu on mobile - show inline nav */
-.menu-trigger,
-#menu-trigger {
-  display: none !important;
+.menu-links a:hover {
+  color: var(--primary);
 }
 
-nav#menu {
-  opacity: 1 !important;
-  visibility: visible !important;
-  position: relative !important;
-  background: transparent !important;
+.menu-links a:not(:last-child)::after {
+  content: ",";
+  margin-right: 0.5rem;
+  color: var(--secondary);
+}
+
+/* Main content */
+.main {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 /* Post list - clean with dates */
 .post-entry {
   border: none;
-  padding: 0.5rem 0;
+  padding: 0.4rem 0;
   margin: 0;
 }
 
@@ -63,6 +75,7 @@ nav#menu {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
+  line-height: 1.4;
 }
 
 .post-entry .entry-header h2 a {
@@ -74,42 +87,42 @@ nav#menu {
 }
 
 .post-meta {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--secondary);
+  margin-bottom: 0.2rem;
 }
 
 /* Hide post content/summary and covers */
 .post-entry .entry-content,
-.post-entry .entry-cover {
+.post-entry .entry-cover,
+.post-entry .entry-footer {
   display: none;
 }
 
 /* Footer - minimal */
 .footer {
-  border-top: 1px solid var(--border);
-  padding-top: 1rem;
-  margin-top: 3rem;
-}
-
-/* Clean overall spacing */
-.main {
   max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  font-size: 0.85rem;
 }
 
 /* Home info section */
-.home-info {
+.first-entry {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
 
-/* Latest posts heading */
-.home-info + .post-entry,
-h2:has(+ ul) {
-  margin-top: 1.5rem;
+/* Section title */
+.first-entry .entry-header h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
 
-/* Archive list style */
+/* Archive/list style */
 .archive-entry {
   padding: 0.3rem 0;
 }
@@ -117,4 +130,9 @@ h2:has(+ ul) {
 .archive-entry .entry-title {
   font-size: 1rem;
   font-weight: 400;
+}
+
+/* Article pages */
+.post-single .post-title {
+  font-size: 1.5rem;
 }
