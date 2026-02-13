@@ -8,8 +8,13 @@
         </div>
         <div class="nav-right">
             <ul id="menu">
-                <li><a href="{{ "" | absLangURL }}">Posts</a></li>
-                <li><a href="{{ "about/" | absLangURL }}">About</a></li>
+                {{- range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL | absLangURL }}"{{ if $.IsPage }} {{ if eq $.RelPermalink .URL }}class="active"{{ end }}{{ end }}>
+                        {{- .Name -}}
+                    </a>
+                </li>
+                {{- end }}
             </ul>
             <div class="social-icons">
                 <a href="https://github.com/llazzaro" title="GitHub" target="_blank" rel="noopener">

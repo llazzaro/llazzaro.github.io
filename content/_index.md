@@ -1,4 +1,6 @@
 +++
-title = "Leonardo Lazzaro - Software Engineer & Django Expert"
-description = "Software engineer, Django expert, and author of 'Ultimate Django for Web App Development Using Python'. Sharing insights on Python, web development, and modern software engineering practices."
+title = "Leonardo Lazzaro"
+description = "Software engineer writing about Python, Django, and building things on the web."
 +++
+
+Software engineer. I write about Python, Django, and building things on the web. Author of [Building Web Applications with Django](https://amzn.to/3HkKKfB).

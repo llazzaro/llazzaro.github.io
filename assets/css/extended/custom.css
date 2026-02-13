@@ -64,6 +64,11 @@
   color: var(--primary);
 }
 
+#menu a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 /* Social icons */
 .social-icons {
   display: flex;
