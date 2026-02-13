@@ -1,0 +1,25 @@
+{{- define "main" }}
+
+{{- /* Profile section (hero) */ -}}
+{{- if .Site.Params.profileMode.enabled }}
+{{- partial "index_profile.html" . }}
+{{- end }}
+
+{{- /* Full post list with dates */ -}}
+<div class="post-list-section">
+    <h2 class="post-list-title">Latest Posts</h2>
+    
+    {{- $pages := where site.RegularPages "Type" "post" }}
+    {{- $pages = $pages.ByDate.Reverse }}
+    
+    <ul class="post-list">
+        {{- range $pages }}
+        <li class="post-list-item">
+            <span class="post-date">{{ .Date.Format "2006-01-02" }}</span>
+            <a href="{{ .Permalink }}" class="post-title-link">{{ .Title }}</a>
+        </li>
+        {{- end }}
+    </ul>
+</div>
+
+{{- end }}{{- /* end main */ -}}
