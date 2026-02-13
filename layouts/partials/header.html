@@ -1,13 +1,17 @@
-{{- /* Custom minimal header - rdegges style */}}
+{{- /* Minimal header - rdegges style */}}
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="{{ "/" | absLangURL }}" accesskey="h" title="{{ .Site.Title }} (Alt + H)">{{ .Site.Title }}</a>
+            <a href="{{ "" | absLangURL }}" accesskey="h" title="{{ .Site.Title }} (Alt + H)">
+                {{- .Site.Title -}}
+            </a>
         </div>
-        <div class="menu-links">
+        <ul id="menu" class="menu-inline">
             {{- range .Site.Menus.main }}
-            <a href="{{ .URL | absLangURL }}" title="{{ .Name }}">{{ .Name }}</a>
+            <li>
+                <a href="{{ .URL | absLangURL }}" title="{{ .Name }}">{{ .Name }}</a>
+            </li>
             {{- end }}
-        </div>
+        </ul>
     </nav>
 </header>
