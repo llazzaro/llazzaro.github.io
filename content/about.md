@@ -11,7 +11,7 @@ I'm a software engineer from Argentina, currently living in **Eindhoven, Netherl
 
 ## What I Do
 
-I work at [FareHarbor](https://www.fareharbor.com/) as a Senior Engineer, building backend systems for the leading booking platform for tours and activities. Before that, I worked on security products, real-time data pipelines, and even did some bioinformatics research during my university thesis.
+I work as a Senior Engineer, building scalable backend systems and microservices. Before that, I worked on security products, real-time data pipelines, and even did some bioinformatics research during my university thesis.
 
 I'm passionate about:
 - **Clean code** and good software engineering practices
