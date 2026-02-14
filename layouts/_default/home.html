@@ -1,9 +1,9 @@
 {{- define "main" }}
 
-{{- /* Profile section (hero) */ -}}
-{{- if .Site.Params.profileMode.enabled }}
-{{- partial "index_profile.html" . }}
-{{- end }}
+{{- /* Homepage content from _index.md */ -}}
+<article class="home-content">
+    {{- .Content }}
+</article>
 
 {{- /* Full post list with dates */ -}}
 <div class="post-list-section">
