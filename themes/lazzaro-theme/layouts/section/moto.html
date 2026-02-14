@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="content">
+  <h1>🏍️ Moto Adventures</h1>
+  
+  {{ .Content }}
+  
+  <div class="moto-list">
+    {{ range .Pages.ByDate.Reverse }}
+    <div class="moto-trip">
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <time>{{ .Date.Format "02 Jan 2006" }}</time>
+      {{ if .Description }}
+      <p>{{ .Description }}</p>
+      {{ end }}
+      {{ with .Params.distance }}
+      <span class="trip-distance">📍 {{ . }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</article>
+{{ end }}

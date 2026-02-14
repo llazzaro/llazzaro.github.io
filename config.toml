@@ -2,7 +2,7 @@ baseURL = "https://www.lazzaro.com.ar"
 languageCode = "en"
 defaultContentLanguage = "en"
 title = "Leonardo Lazzaro"
-theme = "PaperMod"
+theme = "lazzaro-theme"
 
 [build]
   environment = "production"
@@ -23,7 +23,7 @@ theme = "PaperMod"
   dateformat = "02 Jan 2006"
   dateFormat = "02 Jan 2006"
   defaultTheme = "auto"
-  disableThemeToggle = true
+  disableThemeToggle = false
   disableSpecial1stPost = true
   disableScrollToTop = true
   hideMeta = false
@@ -66,7 +66,7 @@ theme = "PaperMod"
 [menu]
   [[menu.main]]
     name = "Posts"
-    url = "/posts/"
+    url = "/post/"
     weight = 1
 
   [[menu.main]]

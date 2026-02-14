@@ -1,0 +1,12 @@
+name = "Lazzaro Theme"
+license = "MIT"
+licenselink = "https://github.com/llazzaro/llazzaro.github.io"
+description = "A minimal, clean Hugo theme for personal sites"
+homepage = "https://www.lazzaro.com.ar"
+tags = ["minimal", "personal", "blog", "responsive"]
+features = ["dark mode", "responsive", "syntax highlighting"]
+min_version = "0.80.0"
+
+[author]
+  name = "Leonardo Lazzaro"
+  homepage = "https://www.lazzaro.com.ar"
