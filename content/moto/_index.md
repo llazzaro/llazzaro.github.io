@@ -1,6 +1,6 @@
 +++
-title = "Bitácora Moto"
-description = "Viajes y aventuras en moto por Europa"
+title = "Moto Log"
+description = "Motorcycle trips and adventures around Europe"
 +++
 
-Viajes y aventuras en dos ruedas. Rutas, fotos y experiencias.
+Two-wheel adventures. Routes, photos and experiences.
