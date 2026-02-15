@@ -494,3 +494,21 @@ hr {
     text-decoration: underline;
   }
 }
+
+/* Language switcher */
+.lang-switch {
+  padding: 0.2rem 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text-secondary);
+  transition: all 0.2s ease;
+}
+
+.lang-switch:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
